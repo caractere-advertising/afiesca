@@ -3,7 +3,9 @@
         <div class="footer-top">
             <div class="col">
                 <?php $logo = get_field('logo_footer','options');?>
-                <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['title'];?>" />
+                <?php if($logo):?>
+                    <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['title'];?>" />
+                <?php endif;?>
             </div>
 
             <?php 
@@ -11,12 +13,15 @@
             if(have_rows('widgets_footer','options')) : 
                 while(have_rows('widgets_footer','options')) : the_row();?>
             <div class="col col_<?php echo $i;?>">
-                <h4><?php echo get_sub_field('titre_colonne');?></h4>
-                <?php $links = get_sub_field('liens_menu');?>
+                <?php 
+                    $titreCol = get_sub_field('titre_colonne');
+                    $links = get_sub_field('liens_menu');
+                ?>
 
+                <h4><?php if($titreCol): echo $titreCol; endif;?></h4>
                 <ul>
                     <?php foreach($links as $link):?>
-                    <li><a href="<?php echo $link->guid;?>"><?php echo $link->post_title;?></a></li>
+                        <li><a href="<?php echo $link->guid;?>"><?php echo $link->post_title;?></a></li>
                     <?php endforeach;?>
                 </ul>
             </div>
@@ -45,23 +50,7 @@
 
         if($keywords):
             echo '<span class="keywords">'.$keywords.'</span>';
-        endif;
-        
-        //  $query = new WP_Query(
-        //             array(
-        //                 'post_type' => 'page',
-        //                 'posts_per_page' => -1
-        //             ));
-        //     $allLinks = $query->posts;
-
-
-        //     foreach ($allLinks as $links):
-        //      echo '<a href="#">'.$links->post_title.'</a>';
-        //     endforeach;
-
-        //     wp_reset_postdata();
-
-        ?>
+        endif;?>
 
     </div>
     <div class="footer_bottom">
