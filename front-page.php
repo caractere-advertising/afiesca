@@ -75,7 +75,7 @@
                 <?php endif;
                 
                 ?><div class="txt"><?php
-                echo $txt;?>
+                if($txt): echo $txt;endif?>
                 </div>
             </div><?php
 
@@ -145,9 +145,11 @@
             
             wp_reset_postdata();?>
         </div>
-        <div class="view_more">
-            <a href="#" class="cta bgBlue from-bottom">Voir tout</a>
-        </div>
+        <?php if($pageActus):?>
+            <div class="view_more">
+                <a href="<?php echo $pageActus['url'];?>" class="cta bgBlue from-bottom"><?php echo $pageActus['title'];?></a>
+            </div>
+        <?php endif;?>
     </div>
 </section>
 

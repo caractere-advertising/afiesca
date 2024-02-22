@@ -22,7 +22,6 @@
         endwhile;
     endif;
 
-
     if(have_rows('liste_documents')):
         while(have_rows('liste_documents')) : the_row();
         
