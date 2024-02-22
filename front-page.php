@@ -19,7 +19,7 @@
                             <?php 
                                 $titre = get_sub_field('titre');
                                 $blue = get_field('fond_bleu');
-                                
+
                                 if($titre): echo $titre; endif;
                             
                                 if($cta):?>
@@ -155,6 +155,8 @@
             
             wp_reset_postdata();?>
         </div>
+        <?php $pageActus = get_field('link_actus','options');?>
+
         <?php if($pageActus):?>
             <div class="view_more">
                 <a href="<?php echo $pageActus['url'];?>" class="cta bgBlue from-bottom"><?php echo $pageActus['title'];?></a>
