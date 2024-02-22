@@ -15,9 +15,11 @@
         <div class="content_section-cta  <?php echo $blue == true ? 'bgBlue' : '';?> from-bottom">
             <?php if($txt): echo $txt;endif;?>
             <?php if($cta):?>
-            <a href="<?php echo $cta['url'];?>" class="cta <?php echo $blue == true ? '' : 'bgBlue';?> from-bottom">
-                <?php echo $cta['title'];?>
-            </a>
+            <span class="cta-item">
+                <a href="<?php echo $cta['url'];?>" class="cta <?php echo $blue == true ? '' : 'bgBlue';?> from-bottom">
+                    <?php echo $cta['title'];?>
+                </a>
+            </span>
             <?php endif;?>
         </div>
     </div>

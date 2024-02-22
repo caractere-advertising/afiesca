@@ -32,6 +32,10 @@
         </div>
 
         <?php $clink = get_field('cta_conf','options');?>
-        <?php if($clink):?><a href="<?php echo $clink['url'];?>" class="cta"><?php echo $clink['title'];?></a><?php endif;?>
+        <?php if($clink):?>
+            <span class="cta-item">
+                <a href="<?php echo $clink['url'];?>" class="cta"><?php echo $clink['title'];?></a>
+            </span>
+        <?php endif;?>
     </div>
 </section>
