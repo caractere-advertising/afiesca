@@ -68,7 +68,8 @@ a {
   }
 }
 
-.cta-item {
+.cta-item,
+.cta-item-blue {
   &::before {
     background-color: $hover;
     content: "";
@@ -95,13 +96,6 @@ a {
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 5px;
-
-    &:hover {
-      &::before {
-        transform: scaleX(1);
-        transform-origin: right;
-      }
-    }
   }
 
   .cta-blue {
@@ -115,12 +109,12 @@ a {
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 5px;
+  }
 
-    &:hover {
-      &::before {
-        transform: scaleX(1);
-        transform-origin: right;
-      }
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+      transform-origin: right;
     }
   }
 }
@@ -174,55 +168,6 @@ a {
 .cta-item-blue {
   &::before {
     background-color: $hover-blue;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform ease-in-out 300ms;
-    z-index: -1;
-    border-radius: 30px;
-  }
-
-  .cta-blue {
-    background-color: $secondary-color;
-    border-radius: 30px;
-    padding: 10px 30px;
-    color: $light;
-    text-decoration: none;
-    position: relative;
-    z-index: 0;
-    text-transform: uppercase;
-    font-weight: 300;
-    letter-spacing: 5px;
-
-    &:hover {
-      &::before {
-        transform: scaleX(1);
-        transform-origin: right;
-      }
-    }
-  }
-
-  .cta {
-    background-color: $primary-color;
-    border-radius: 30px;
-    padding: 10px 30px;
-    color: $light;
-    text-decoration: none;
-    position: relative;
-    z-index: 0;
-    text-transform: uppercase;
-    font-weight: 300;
-    letter-spacing: 5px;
-
-    &:hover {
-      &::before {
-        transform: scaleX(1);
-        transform-origin: right;
-      }
-    }
   }
 }
 
