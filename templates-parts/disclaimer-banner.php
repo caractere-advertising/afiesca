@@ -4,6 +4,7 @@
     $txtBanner = get_field('texte_banner','options');
     $imgBanner = get_field('image_banner','options');
     $ctaBanner = get_field('cta_banner','options');
+    $blue = get_field('fond_bleu');
     ?>
 
     <div class="container from-left"

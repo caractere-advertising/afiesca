@@ -4,6 +4,7 @@
 get_header();
 
 $bg_header = get_field('bg_header');
+$blue = get_field('fond_bleu');
 
 if(!$bg_header):
     $bg_url = get_template_directory_uri(  ).'/assets/img/bg-default.jpg';

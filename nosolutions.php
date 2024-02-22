@@ -3,7 +3,8 @@
 
 get_header();
 $bg_header = get_field('background');
-$title_header = get_field('titre_page');?>
+$title_header = get_field('titre_page');
+$blue = get_field('fond_bleu');?>
 
 <?php get_template_part( 'templates-parts/header-nav');?>
 

@@ -18,7 +18,8 @@
                             <p class="baseline"><?php if($sousTitre): echo $sousTitre;endif;?></p>
                             <?php 
                                 $titre = get_sub_field('titre');
-
+                                $blue = get_field('fond_bleu');
+                                
                                 if($titre): echo $titre; endif;
                             
                                 if($cta):?>

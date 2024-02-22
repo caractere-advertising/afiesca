@@ -1,4 +1,4 @@
-<?php $color_bg = get_field('arriere_plan-color');?>
+<?php $color_bg = get_field('arriere_plan-color');$blue = get_field('fond_bleu');?>
 
 <div class="main-content" <?php if($color_bg): echo $color_bg ? "style='background:#f7f8f9;'" : '';endif;?>>
     <div class="col-g">
