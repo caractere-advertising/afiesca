@@ -129,8 +129,10 @@ $title_header = get_field('titre_page');?>
             <?php endif;?>
 
             <?php if($ctaBanner):?>
-            <a href="<?php echo $ctaBanner['url'];?>" class="cta bgBlue"><?php echo $ctaBanner['title'];
-            endif;?></a>
+            <span class="cta-item<?php echo $blue == true ? '' : '-blue';?>">
+                <a href="<?php echo $ctaBanner['url'];?>" class="cta bgBlue"><?php echo $ctaBanner['title'];?></a>
+            </span>
+            <?php endif;?>
         </div>
     </div>
 </section>
@@ -163,9 +165,11 @@ $title_header = get_field('titre_page');?>
         </div>
 
         <?php $clink = get_field('cta_conf','options');?>
-        <?php if($clink):?><a href="<?php echo $clink['url'];?>"
-            class="cta"><?php echo $clink['title'];?></a><?php endif;?>
-    </div>
+        <?php if($clink):?>
+            <span class="cta-item<?php echo $blue == true ? '' : '-blue';?>">
+                <a href="<?php echo $clink['url'];?>" class="cta"><?php echo $clink['title'];?></a><?php endif;?>
+            </span>
+        </div>
     </div>
 </section>
 <?php get_footer();

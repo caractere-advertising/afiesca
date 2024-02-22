@@ -37,7 +37,6 @@ get_template_part( 'templates-parts/header-nav');?>
     </div>
 </section>
 
-
 <section id="section_bleue">
     <div class="container">
         <div class="cold">

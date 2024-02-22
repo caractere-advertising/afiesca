@@ -36,7 +36,9 @@ get_template_part( 'templates-parts/header-nav');?>
 
         <div class="descr">
             <?php if($textExp) : echo $textExp;endif;?>
-            <?php if($cta) : echo '<a href="'.$cta['url'].'" class="cta">'.$cta['title'].'</a>';endif;?>
+            <span class="cta-item<?php echo $blue == true ? '' : '-blue';?>">
+                <?php if($cta) : echo '<a href="'.$cta['url'].'" class="cta">'.$cta['title'].'</a>';endif;?>
+            </span>
         </div>
 
         <div class="grid_stats">

@@ -18,11 +18,13 @@
                             <p class="baseline"><?php if($sousTitre): echo $sousTitre;endif;?></p>
                             <?php 
                                 $titre = get_sub_field('titre');
-                                
+
                                 if($titre): echo $titre; endif;
                             
                                 if($cta):?>
-                                    <a href="<?php echo $cta['url'];?>" class="cta"><?php echo $cta['title'];?></a>
+                                    <span class="cta-item<?php echo $blue == true ? '' : '-blue';?>">
+                                        <a href="<?php echo $cta['url'];?>" class="cta"><?php echo $cta['title'];?></a>
+                                    </span>
                                 <?php endif;?>
                         </div>
                     </div>
