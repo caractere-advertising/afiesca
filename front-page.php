@@ -14,9 +14,11 @@
                     <div class="swiper-slide">
                         <img src="<?php echo $bg['url'];?>" alt="bg_slider" />
                         <div class="content">
-                            <p class="baseline"><?php echo get_sub_field('sous-titre');?></p>
-                            <?php echo get_sub_field('titre');?>
-                            <a href="<?php echo $cta['url'];?>" class="cta">NOS SOLUTIONS</a>
+                            <?php $sousTitre = get_sub_field('sous-titre');?>
+                            <p class="baseline"><?php if($sousTitre): echo $sousTitre;endif;?></p>
+                            <?php 
+                            echo get_sub_field('titre');
+                            if($cta):?><a href="<?php echo $cta['url'];?>" class="cta"><?php echo $cta['title'];?></a><?php endif;?>
                         </div>
                     </div>
                     <?php endif;
