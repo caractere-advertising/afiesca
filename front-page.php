@@ -97,12 +97,12 @@
                 <?php endif;?>
 
                 <span class="from-right">
-                    <?php echo $descStats;?>
+                    <?php if($descStats): echo $descStats; endif;?>
                 </span>
             </div>
 
             <div class="getOffre from-right">
-                <?php echo $dmdOffre;?>
+                <?php if($dmdOffre): echo $dmdOffre; endif;?>
             </div>
         </div>
     </div>
