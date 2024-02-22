@@ -7,7 +7,7 @@
                 
         echo '<span class="from-bottom">' . get_field('introduction','options') . '</span>';?>
         <?php if($img):?>
-        <img src="<?php echo $img['url'];?>" alt="<?php echo $img['name'];?>" class="from-bottom" />
+            <img src="<?php echo $img['url'];?>" alt="<?php echo $img['name'];?>" class="from-bottom" />
         <?php endif;?>
     </div>
     <div class="col-d">

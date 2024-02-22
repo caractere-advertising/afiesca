@@ -18,13 +18,13 @@
                         ?>
 
                 <?php if($img):?>
-                <img src="<?php echo $img['url'];?>" alt="<?php echo $img['name'];?>" />
+                    <img src="<?php echo $img['url'];?>" alt="<?php echo $img['name'];?>" />
                 <?php endif;?>
                 <?php if($title):?>
-                <h4><?php echo $title;?></h4>
+                    <h4><?php echo $title;?></h4>
                 <?php endif;?>
                 <?php if($texte):?>
-                <p><?php echo $texte;?></p>
+                    <p><?php echo $texte;?></p>
                 <?php endif;?>
             </div>
             <?php endwhile;
@@ -32,6 +32,6 @@
         </div>
 
         <?php $clink = get_field('cta_conf','options');?>
-        <a href="<?php echo $clink['url'];?>" class="cta"><?php echo $clink['title'];?></a>
+        <?php if($clink):?><a href="<?php echo $clink['url'];?>" class="cta"><?php echo $clink['title'];?></a><?php endif;?>
     </div>
 </section>

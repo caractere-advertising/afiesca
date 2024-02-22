@@ -3,7 +3,7 @@
         <a href="<?php echo home_url();?>">
             <?php $logo = get_field('logo-entreprise','options');?>
             <?php if($logo):?>
-            <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['title'];?>" class="logo" />
+                <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['title'];?>" class="logo" />
             <?php endif;?>
         </a>
     </div>

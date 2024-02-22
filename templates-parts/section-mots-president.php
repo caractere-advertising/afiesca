@@ -8,7 +8,10 @@
                 <?php endif;?>
             </div>
             <div class="col-d from-right">
-                <?php echo get_field('texte_du_president','options');?>
+                <?php 
+                $txtPresident = get_field('texte_du_president','options');
+                
+                if($txtPresident): echo $txtPresident; endif;?>
             </div>
         </div>
     </div>

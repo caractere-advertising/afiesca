@@ -7,15 +7,15 @@
     ?>
 
     <div class="container from-left"
-        style="background:url('<?php echo $bgBanner['url'];?>') no-repeat;background-size:cover;">
+        <?php if($bgBanner):?> style="background:url('<?php echo $bgBanner['url'];?>') no-repeat;background-size:cover;"<?php endif;?>>
         <div class="colg">
-            <?php echo $txtBanner;?>
+            <?php if($txtBanner): echo $txtBanner; endif;?>
         </div>
         <div class="cold">
             <?php if($imgBanner):?>
             <img src="<?php echo $imgBanner['url'];?>" alt="<?php echo $imgBanner['title'];?>" />
             <?php endif;?>
-            <a href="<?php echo $ctaBanner['url'];?>" class="cta bgBlue"><?php echo $ctaBanner['title'];?></a>
+            <?php if($ctaBanner):?><a href="<?php echo $ctaBanner['url'];?>" class="cta bgBlue"><?php echo $ctaBanner['title'];?></a><?php endif;?>
         </div>
     </div>
 </section>
