@@ -11,9 +11,11 @@ $links = get_field('liens_vosp');
     if($title && $baseline): echo '<span class="from-bottom">'. $title . '</span><span class="balls from-bottom"></span><h3 class="from-bottom">'.$baseline.'</span></h3>';endif;
     echo '<div class="list-btn from-bottom">';
     if($links):
-        foreach ($links as $link):
-            echo '<span class="cta-item"><a href="' . $link->guid. '" class="cta-border from-bottom">' . $link->post_title . '</a></span>';
-        endforeach;
+        foreach ($links as $link):?>
+            <span class="cta-item<?php echo $blue == true ? '' : '-blue';?>">
+                <a href="' . $link->guid. '" class="cta-border from-bottom"><?php echo $link->post_title;?></a>
+            </span>
+        <?php endforeach;
     endif;?>
 </div>
 </div>

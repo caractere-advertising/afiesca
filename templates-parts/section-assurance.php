@@ -15,6 +15,8 @@
     </div>
     <div class="col-d">
         <?php if($txtApropos): echo '<span class="from-bottom">' . $txtApropos . '</span>'; endif?>
-        <a href="<?php if($btn) : $btn['url'];?>" class="cta from-bottom"><?php echo $btn['title']; endif;?></a>
+        <span class="cta-item<?php echo $blue == true ? '' : '-blue';?>">
+            <a href="<?php if($btn) : $btn['url'];?>" class="cta from-bottom"><?php echo $btn['title']; endif;?></a>
+        </span>
     </div>
 </div>
