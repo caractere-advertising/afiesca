@@ -26,10 +26,18 @@
         while(have_rows('liste_documents')) : the_row();
         
         $document = get_sub_field('document');
+        $liens = get_sub_field('liens');
         $libelle = get_sub_field('libelle');?>
 
     <?php if($document):?>
         <a href="<?php echo $document['url'];?>" target="_blank" class="from-left">
+            <div class="document_ddl">
+                <img src="<?php echo get_template_directory_uri(  );?>/assets/img/icone_pdf.svg" alt="icone_ddl" />
+                <p><?php echo $libelle;?></p>
+            </div>
+        </a><?php 
+    else if($liens):?>
+        <a href="<?php echo $liens['url'];?>" target="_blank" class="from-left">
             <div class="document_ddl">
                 <img src="<?php echo get_template_directory_uri(  );?>/assets/img/icone_pdf.svg" alt="icone_ddl" />
                 <p><?php echo $libelle;?></p>
