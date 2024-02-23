@@ -36,7 +36,8 @@
                 <p><?php echo $libelle;?></p>
             </div>
         </a><?php 
-    elseif($liens):?>
+    endif;
+    if($liens):?>
         <a href="<?php echo $liens['url'];?>" target="_blank" class="from-left">
             <div class="document_ddl">
                 <img src="<?php echo get_template_directory_uri(  );?>/assets/img/icone_pdf.svg" alt="icone_ddl" />
