@@ -22,7 +22,7 @@
             <?php else :
                 $btn = get_field('lien_about','options');
             ?>
-                <a href="<?php echo if($btn) : $btn['url'];?>" class="cta from-bottom"><?php echo $btn['title']; endif;?></a>
+                <a href="<?php if($btn) : echo  $btn['url'];?>" class="cta from-bottom"><?php echo $btn['title']; endif;?></a>
             <?php endif;?>
         </span>
     </div>
