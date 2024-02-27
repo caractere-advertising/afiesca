@@ -29,22 +29,22 @@
         $liens = get_sub_field('liens');
         $libelle = get_sub_field('libelle');?>
 
-    <?php if($document):?>
-        <a href="<?php echo $document['url'];?>" target="_blank" class="from-left">
-            <div class="document_ddl">
-                <img src="<?php echo get_template_directory_uri(  );?>/assets/img/icone_pdf.svg" alt="icone_ddl" />
-                <p><?php echo $libelle;?></p>
-            </div>
-        </a><?php 
-    endif;
-    if($liens):?>
-        <a href="<?php echo $liens['url'];?>" target="_blank" class="from-left">
-            <div class="document_ddl">
-                <img src="<?php echo get_template_directory_uri(  );?>/assets/img/icone_pdf.svg" alt="icone_ddl" />
-                <p><?php echo $libelle;?></p>
-            </div>
-        </a><?php 
-    endif;
+            <?php if($document):?>
+                <a href="<?php echo $document['url'];?>" target="_blank" class="from-left">
+                    <div class="document_ddl">
+                        <img src="<?php echo get_template_directory_uri(  );?>/assets/img/icone_pdf.svg" alt="icone_ddl" />
+                        <p><?php echo $libelle;?></p>
+                    </div>
+                </a><?php 
+            endif;
+            if($liens):?>
+                <a href="<?php echo $liens['url'];?>" target="_blank" class="from-left">
+                    <div class="document_ddl">
+                        <img src="<?php echo get_template_directory_uri(  );?>/assets/img/icone_pdf.svg" alt="icone_ddl" />
+                        <p><?php echo $libelle;?></p>
+                    </div>
+                </a><?php 
+            endif;
 endwhile;
 endif;?>
 </div>
