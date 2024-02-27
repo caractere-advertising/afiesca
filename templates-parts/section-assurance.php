@@ -18,7 +18,7 @@
             <?php if(is_page(318)) :
                 $btn = get_field('cta-contact');
             ?>
-                <a href="<?php echo if($btn) : $btn['url'];?>" class="cta from-bottom"><?php echo $btn['title']; endif;?></a>
+                <a href="<?php if($btn) : echo $btn['url'];?>" class="cta from-bottom"><?php echo $btn['title']; endif;?></a>
             <?php else :
                 $btn = get_field('lien_about','options');
             ?>
