@@ -6,7 +6,6 @@
         $img = get_field('image_about','options');
         $intro = get_field('introduction','options');
         $txtApropos = get_field('texte_apropos','options');
-        $btn = get_field('lien_about','options');
                 
         if($intro): echo '<span class="from-bottom">' . $intro . '</span>';endif?>
         <?php if($img):?>
@@ -16,7 +15,15 @@
     <div class="col-d">
         <?php if($txtApropos): echo '<span class="from-bottom">' . $txtApropos . '</span>'; endif?>
         <span class="cta-item<?php echo $blue == true ? '' : '-blue';?>">
-            <a href="<?php if($btn) : $btn['url'];?>" class="cta from-bottom"><?php echo $btn['title']; endif;?></a>
+            <?php if(is_page(318)) :
+                $btn = get_field('cta-contact');
+            ?>
+                <a href="<?php echo if($btn) : $btn['url'];?>" class="cta from-bottom"><?php echo $btn['title']; endif;?></a>
+            <?php else :
+                $btn = get_field('lien_about','options');
+            ?>
+                <a href="<?php echo if($btn) : $btn['url'];?>" class="cta from-bottom"><?php echo $btn['title']; endif;?></a>
+            <?php endif;?>
         </span>
     </div>
 </div>
