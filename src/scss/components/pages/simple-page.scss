@@ -105,6 +105,10 @@
         p,
         li {
           color: $light;
+
+          ul {
+            margin-left: 30px;
+          }
         }
         a {
           color: $light !important;

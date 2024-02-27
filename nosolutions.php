@@ -94,7 +94,7 @@ $blue = get_field('fond_bleu');?>
                     $link = get_sub_field('document');
                     $icone = get_sub_field('icone');?>
 
-            <a href="<?php if($link): echo $link['url'];endif;?>" target="_blank">
+            <a href="<?php if($link): echo $link['url'];endif;?>">
                 <div class="document_ddl">
                     <img src="<?php if($icone) : echo $icone['url']; endif;?>" alt="icone_ddl" />
                     <p><?php if($link): echo $link['title']; endif; ?></p>
