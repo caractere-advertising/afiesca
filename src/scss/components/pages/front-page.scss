@@ -84,6 +84,7 @@
     .grid {
       position: relative;
       width: 70vw;
+      max-width: 1400px;
       margin: auto;
       top: -100px;
       z-index: 10;
@@ -361,6 +362,7 @@
         }
 
         .txt {
+          width: calc(100% - 60px);
           h4 {
             font-size: 1.2rem;
             font-weight: 600;
