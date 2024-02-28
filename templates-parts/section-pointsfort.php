@@ -38,7 +38,7 @@
                 </a><?php 
             endif;
             if($liens):?>
-                <a href="<?php echo $liens['url'];?>" target="_blank" class="from-left">
+                <a href="<?php echo $liens['url'];?>" <?php if($liens['target']):?> target="_blank" <?php endif;?> class="from-left">
                     <div class="document_ddl">
                         <img src="<?php echo get_template_directory_uri(  );?>/assets/img/icone_pdf.svg" alt="icone_ddl" />
                         <p><?php echo $libelle;?></p>
