@@ -15,15 +15,15 @@
                         <img src="<?php echo $bg['url'];?>" alt="bg_slider" />
                         <div class="content">
                             <?php $sousTitre = get_sub_field('sous-titre');?>
-                            <p class="baseline"><?php if($sousTitre): echo $sousTitre;endif;?></p>
+                            <p class="baseline" data-swiper-parallax="-100"><?php if($sousTitre): echo $sousTitre;endif;?></p>
                             <?php 
                                 $titre = get_sub_field('titre');
                                 $blue = get_field('fond_bleu');
 
-                                if($titre): echo $titre; endif;
+                                if($titre): echo '<span data-swiper-parallax="-300"'>.$titre.'</span>'; endif;
                             
                                 if($cta):?>
-                                    <span class="cta-item<?php echo $blue == true ? '' : '-blue';?>">
+                                    <span class="cta-item<?php echo $blue == true ? '' : '-blue';?>" data-swiper-parallax="-200">
                                         <a href="<?php echo $cta['url'];?>" class="cta"><?php echo $cta['title'];?></a>
                                     </span>
                                 <?php endif;?>

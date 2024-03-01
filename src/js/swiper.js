@@ -2,6 +2,7 @@ const swiper = new Swiper(".swiper-hero", {
   loop: true,
   autoplay: false,
   cssMode: true,
+  parallax: true,
 
   pagination: {
     el: ".swiper-pagination",
