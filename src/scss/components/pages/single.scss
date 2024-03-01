@@ -69,15 +69,15 @@
           ul {
             border-left: 5px solid $primary-color;
             padding-left: 20px;
-          }
 
-          li {
-            margin-left: 20px;
-            margin-bottom: 0;
+            li {
+              margin-left: 20px;
+              margin-bottom: 0;
 
-            ul {
-              border-left: none;
-              padding-left: 5px;
+              ul {
+                border-left: none;
+                padding-left: 5px;
+              }
             }
           }
           a {
@@ -102,6 +102,19 @@
 
     .container {
       .cold {
+        ul {
+          border-left: 5px solid $primary-color;
+          padding-left: 20px;
+
+          ul {
+            margin-left: 30px;
+
+            li {
+              margin-bottom: 5px;
+            }
+          }
+        }
+
         p,
         li {
           color: $light;
