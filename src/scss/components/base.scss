@@ -89,7 +89,7 @@ a {
     content: "";
     position: absolute;
     margin-top: -10px;
-    margin-left: -70px;
+    margin-left: -40px;
     height: 100%;
     width: 40px;
     transform-origin: left;
@@ -108,7 +108,7 @@ a {
 }
 
 .cta-border {
-  background-color: none;
+  background-color: $light;
   border: 1px solid $primary-color;
   border-radius: 30px;
   color: $dark-gray;
@@ -120,7 +120,7 @@ a {
   font-weight: 300;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  overflow: hidden !important;
 
   .cta-border + .cta-border {
     margin-left: 30px;
@@ -130,11 +130,11 @@ a {
     content: "";
     position: absolute;
     z-index: -1;
+    margin-left: -40px;
     width: 40px;
     height: 100%;
     top: 0;
     background-color: #7f1f2f;
-    opacity: 0;
     transform-origin: right;
     display: block;
     transition: width ease-in 300ms;
@@ -165,12 +165,14 @@ a {
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 5px;
+  overflow: hidden;
 
   &::before {
     background-color: $hover-blue;
     content: "";
     position: absolute;
     width: 40px;
+    margin-left: -40px;
     height: 100%;
     transform-origin: left;
     transition: width ease-in-out 300ms;
