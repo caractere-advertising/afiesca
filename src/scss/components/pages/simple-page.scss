@@ -37,8 +37,7 @@
         }
       }
       .cold {
-        padding-left: 20%;
-        margin: 100px 0 150px;
+        padding: 100px 0 100px 20%;
 
         h2 {
           font-size: 1rem;
@@ -68,7 +67,7 @@
             position: absolute;
             display: block;
             background: $primary-color;
-            bottom: 2.5px;
+            bottom: 20px;
           }
 
           ul {
@@ -108,7 +107,6 @@
 
   #section_bleue {
     background-color: $secondary-color;
-    padding-bottom: 30px;
 
     .container {
       .cold {
@@ -143,10 +141,11 @@
   }
 
   #disclaimer_banner {
-    padding-top: 150px;
+    padding-top: 0px;
+    min-height: 350px;
   }
 
   #confiance {
-    padding-bottom: 250px;
+    padding-bottom: 150px;
   }
 }
