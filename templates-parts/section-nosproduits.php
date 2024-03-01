@@ -13,7 +13,7 @@ $blue = get_field('fond_bleu');
     if($links):
         foreach ($links as $link):?>
             <span class="cta-item<?php echo $blue == true ? '' : '-blue';?>">
-                <a href="<?php echo $link->guid;?>" class="cta-border from-bottom"><?php echo $link->post_title;?></a>
+                <a href="<?php echo $link->guid;?>" class="cta cta-border from-bottom"><?php echo $link->post_title;?></a>
             </span>
         <?php endforeach;
     endif;?>
