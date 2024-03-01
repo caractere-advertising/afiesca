@@ -102,6 +102,7 @@ a {
     &::before {
       width: 100%;
       opacity: 1;
+      transition: width ease-in-out 300ms;
       transform-origin: right;
     }
   }
@@ -150,6 +151,7 @@ a {
       width: 100%;
       opacity: 1;
       transform-origin: left;
+      transition: width ease-in-out 300ms;
     }
   }
 }
@@ -184,6 +186,7 @@ a {
       opacity: 1;
       width: 100%;
       transform-origin: right;
+      transition: width ease-in-out 300ms;
     }
   }
 }
