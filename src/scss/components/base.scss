@@ -89,7 +89,7 @@ a {
     content: "";
     position: absolute;
     margin-top: -10px;
-    margin-left: -40px;
+    margin-left: -70px;
     height: 100%;
     width: 40px;
     transform-origin: left;
@@ -112,46 +112,46 @@ a {
   border: 1px solid $primary-color;
   border-radius: 30px;
   color: $dark-gray;
-  font-size: 0.9rem;
   padding: 10px 30px;
   text-decoration: none;
-  letter-spacing: 5px;
+  position: relative;
+  z-index: 0;
   text-transform: uppercase;
   font-weight: 300;
-  text-align: center;
-  position: relative;
-  overflow: hidden !important;
-
-  .cta-border + .cta-border {
-    margin-left: 30px;
-  }
+  letter-spacing: 5px;
+  display: inline-block;
+  margin: auto;
+  overflow: hidden;
 
   &::before {
+    background-color: $primary-color;
+    border-radius: 30px;
     content: "";
     position: absolute;
-    z-index: -1;
-    margin-left: -40px;
-    width: 40px;
+    margin-top: -10px;
+    margin-left: -70px;
     height: 100%;
+    width: 40px;
     top: 0;
-    background-color: #7f1f2f;
-    transform-origin: right;
-    display: block;
-    transition: width ease-in 300ms;
+    transform-origin: left;
+    transition: width ease-in-out 300ms;
+    z-index: -1;
     color: #fff;
-    left: 0;
-    border-radius: 30px;
   }
 
   &:hover {
-    color: #fff;
+    color: $light;
 
     &::before {
       width: calc(100% + 40px);
-      transform-origin: left;
       transition: width ease-in-out 300ms;
+      transform-origin: right;
     }
   }
+}
+
+.cta-border + .cta-border {
+  margin-left: 30px;
 }
 
 .cta-blue {
