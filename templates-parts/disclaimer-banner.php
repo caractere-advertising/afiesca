@@ -17,7 +17,7 @@
             <img src="<?php echo $imgBanner['url'];?>" alt="<?php echo $imgBanner['title'];?>" />
             <?php endif;?>
             <?php if($ctaBanner):?><span class="cta-item<?php echo $blue == true ? '' : '-blue';?>">
-                                    <a href="<?php echo $ctaBanner['url'];?>" class="cta bgBlue"><?php echo $ctaBanner['title'];?></a></span><?php endif;?>
+                <a href="<?php echo $ctaBanner['url'];?>" class="cta cta-blue bgBlue"><?php echo $ctaBanner['title'];?></a></span><?php endif;?>
         </div>
     </div>
 </section>
