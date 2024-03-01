@@ -82,15 +82,15 @@ a {
   letter-spacing: 5px;
   display: inline-block;
   margin: auto;
+  overflow: hidden;
 
   &::before {
     background-color: $hover;
     content: "";
     position: absolute;
     margin-top: -10px;
-    margin-left: -30px;
+    margin-left: -70px;
     height: 100%;
-    opacity: 0;
     width: 40px;
     transform-origin: left;
     transition: width ease-in-out 300ms;
@@ -100,8 +100,7 @@ a {
 
   &:hover {
     &::before {
-      width: 100%;
-      opacity: 1;
+      width: calc(100% + 40px);
       transition: width ease-in-out 300ms;
       transform-origin: right;
     }
@@ -148,8 +147,7 @@ a {
     color: #fff;
 
     &::before {
-      width: 100%;
-      opacity: 1;
+      width: calc(100% + 40px);
       transform-origin: left;
       transition: width ease-in-out 300ms;
     }
@@ -174,7 +172,6 @@ a {
     position: absolute;
     width: 40px;
     height: 100%;
-    opacity: 0;
     transform-origin: left;
     transition: width ease-in-out 300ms;
     z-index: -1;
@@ -183,8 +180,7 @@ a {
 
   &:hover {
     &::before {
-      opacity: 1;
-      width: 100%;
+      width: calc(100% + 40px);
       transform-origin: right;
       transition: width ease-in-out 300ms;
     }
