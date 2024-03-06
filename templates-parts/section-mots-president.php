@@ -21,8 +21,10 @@
                 
                 if(!is_page(318)):
                     if($titrePresident): echo $titrePresident; endif;
-                    if($txtPresident): echo $txtPresident; endif;
-                endif;?>
+                endif;
+                
+                if($txtPresident): echo $txtPresident; endif;
+                ?>
             </div>
         </div>
     </div>
