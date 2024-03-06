@@ -63,7 +63,7 @@
         <div class="box-content from-right">
             <?php echo $title;?>
             <?php echo $disdesc;?>
-            <?php echo $linkdis;?>
+            <a href="<?php echo $linkdis['url'];?>" class="cta"><?php echo $linkdis['title'];?></a>
         </div>
     </div>
 </section>
