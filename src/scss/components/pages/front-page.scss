@@ -149,7 +149,6 @@
     .col-g {
       max-height: 750px;
       min-height: 700px;
-      bottom: -300px;
       overflow: hidden;
       position: relative;
 
@@ -159,6 +158,7 @@
         position: absolute;
         object-fit: cover;
         -o-object-fit: cover;
+        margin-top: 300px;
       }
     }
     .col-d {
