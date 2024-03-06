@@ -124,12 +124,14 @@
 <?php get_template_part('templates-parts/disclaimer-banner');?>
 
 <section id="actualites">
-    <div class="intro_actu columns">
-        <div class="colg">
-            <span class="from-left"><?php echo get_field('titre_actus');?></span>
-        </div>
-        <div class="cold">
-            <span class="from-left"><?php echo get_field('texte_actus');?></span>
+    <div class="container columns">
+        <div class="intro_actu">
+            <div class="colg">
+                <span class="from-left"><?php echo get_field('titre_actus');?></span>
+            </div>
+            <div class="cold">
+                <span class="from-left"><?php echo get_field('texte_actus');?></span>
+            </div>
         </div>
     </div>
     <div class="container">
