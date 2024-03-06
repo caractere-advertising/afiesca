@@ -63,6 +63,7 @@
         <div class="box-content from-right">
             <?php echo $title;?>
             <?php echo $disdesc;?>
+            <?php echo $linkdis;?>
         </div>
     </div>
 </section>
