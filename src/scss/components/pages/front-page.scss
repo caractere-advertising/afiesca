@@ -152,6 +152,7 @@
         min-height: 700px;
         overflow: hidden;
         position: relative;
+        bottom: -200px;
 
         img {
           width: 100%;
@@ -159,7 +160,6 @@
           position: absolute;
           object-fit: cover;
           -o-object-fit: cover;
-          margin-top: 200px;
         }
       }
     }
