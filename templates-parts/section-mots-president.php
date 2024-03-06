@@ -5,7 +5,8 @@
                 <?php $img = get_field('image_nossolutions','options');
                 
                 if(is_page(318)):
-                    $txtPresident = get_field('texte_du_president','options');
+                    $titrePresident = get_field('titre_du_president','options');
+                    if($titrePresident): echo $titrePresident; endif;
                 endif;
                 
                 if($img):?>
@@ -16,8 +17,10 @@
             <div class="col-d from-right">
                 <?php 
                 $txtPresident = get_field('texte_du_president','options');
+                $titrePresident = get_field('titre_du_president','options');
                 
                 if(!is_page(318)):
+                    if($titrePresident): echo $titrePresident; endif;
                     if($txtPresident): echo $txtPresident; endif;
                 endif;?>
             </div>
