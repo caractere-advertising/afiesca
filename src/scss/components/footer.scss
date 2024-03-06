@@ -1,12 +1,14 @@
 footer {
   background-color: $secondary-color;
+  background: url(../../assets/img/background-footer.png) no-repeat;
+  background-size: cover;
+
   .container {
     .footer-top {
       display: flex;
       justify-content: space-around;
       border-bottom: 1px solid $dark-gray;
       padding-top: 80px;
-      background: url(../../assets/img/background-footer.png) no-repeat cover;
 
       .col {
         width: calc((100% - 100px) / 4);
