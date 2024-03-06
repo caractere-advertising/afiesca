@@ -10,7 +10,7 @@
                 endif;
                 
                 if($img):?>
-                    <div class="block_img">
+                    <div class="block_img" <?php if(is_page(318)): echo "style=\"bottom: -200px;\"";endif;?>>
                         <img src="<?php echo $img['url'];?>" alt="<?php echo $img['name'];?>" class="from-left" />
                     </div>
                 <?php endif;?>
