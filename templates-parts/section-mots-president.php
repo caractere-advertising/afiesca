@@ -10,8 +10,9 @@
                 endif;
                 
                 if($img):?>
-                    
-                <img src="<?php echo $img['url'];?>" alt="<?php echo $img['name'];?>" class="from-left" />
+                    <div class="block_img">
+                        <img src="<?php echo $img['url'];?>" alt="<?php echo $img['name'];?>" class="from-left" />
+                    </div>
                 <?php endif;?>
             </div>
             <div class="col-d from-right">
