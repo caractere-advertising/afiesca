@@ -308,7 +308,7 @@
   background-color: $light-gray;
 
   .container {
-    padding: 100px 0;
+    padding: 60px 0 100px 0;
     border-bottom: 1px solid $middle-gray;
 
     .intro_actu,
@@ -338,7 +338,7 @@
   }
 
   .columns {
-    padding-bottom: 0;
+    padding: 100px 0 0 0;
     border: none;
 
     .intro_actu {
