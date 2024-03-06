@@ -126,10 +126,10 @@
 <section id="actualites">
     <div class="container columns">
         <div class="intro_actu">
-            <div class="colg">
+            <div class="col-g">
                 <span class="from-left"><?php echo get_field('titre_actus');?></span>
             </div>
-            <div class="cold">
+            <div class="col-d">
                 <span class="from-left"><?php echo get_field('texte_actus');?></span>
             </div>
         </div>

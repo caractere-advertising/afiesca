@@ -306,6 +306,7 @@
 
 #actualites {
   background-color: $light-gray;
+
   .container {
     padding: 100px 0;
     border-bottom: 1px solid $middle-gray;
@@ -313,23 +314,7 @@
     .intro_actu,
     .grid_articles {
       display: flex;
-      gap: 50px;
-    }
-
-    .intro_actu {
-      margin-bottom: 100px;
-
-      h2,
-      p {
-        width: 50%;
-      }
-
-      h2 {
-        color: $secondary-color;
-      }
-      p {
-        padding-top: 60px;
-      }
+      gap: 70px;
     }
 
     .grid_articles {
@@ -349,6 +334,22 @@
     .view_more {
       text-align: center;
       margin-top: 200px;
+    }
+  }
+
+  .columns {
+    padding-bottom: 0;
+    border: none;
+
+    .intro_actu {
+      margin-bottom: 50px;
+
+      h2 {
+        color: $secondary-color;
+      }
+      p {
+        padding-top: 60px;
+      }
     }
   }
 }
