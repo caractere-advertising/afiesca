@@ -147,12 +147,16 @@
 
   .container {
     .col-g {
-      max-height: 800px;
+      max-height: 750px;
+      min-height: 700px;
+      bottom: -300px;
       overflow: hidden;
+      position: relative;
 
       img {
         width: 100%;
         height: 100%;
+        position: absolute;
         object-fit: cover;
         -o-object-fit: cover;
       }
