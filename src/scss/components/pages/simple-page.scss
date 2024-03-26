@@ -60,16 +60,6 @@
 
         .intro,
         .par_cta {
-          &::after {
-            content: "";
-            width: 50px;
-            height: 5px;
-            position: absolute;
-            display: block;
-            background: $primary-color;
-            bottom: -50px;
-          }
-
           ul {
             border-left: 5px solid $primary-color;
             padding-left: 20px;
