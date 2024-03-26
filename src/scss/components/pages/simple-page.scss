@@ -92,6 +92,11 @@
           a {
             color: $secondary-color;
           }
+
+          .cta-blue {
+            color: $light;
+            border-radius: 20px;
+          }
         }
 
         .cta {
