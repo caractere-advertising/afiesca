@@ -1,9 +1,9 @@
 <?php 
-$title = get_field('titre-vosp');
-$baseline = get_field('baseline-vosp');
+$title = get_field('titre-vosp','options');
+$baseline = get_field('baseline-vosp','options');
 
-$links = get_field('liens_vosp');
-$blue = get_field('fond_bleu');
+$links = get_field('liens_vosp','options');
+$blue = get_field('fond_bleu','options');
 ?>
 
 <div class="section_vosp from-bottom">
