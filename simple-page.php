@@ -37,7 +37,7 @@ get_template_part( 'templates-parts/header-nav');?>
             <div class="intro from-bottom"><?php if($intro) : echo $intro;endif;?></div>
             <?php if($textCta) :?>
             <div class="par_cta">
-                <?php if($cta) : echo '<a href="'.$cta['url'].'" class="cta-blue">'. $cta['title'] .'</a>';endif;?>
+                <?php if($cta) : echo '<a href="'.$cta['url'].'" class="cta cta-blue">'. $cta['title'] .'</a>';endif;?>
             </div>
             <?php endif;?>
         </div>
