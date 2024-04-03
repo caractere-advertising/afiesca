@@ -8,9 +8,10 @@
             <?php if(have_rows('slides')):
                 while(have_rows('slides')) : the_row();?>
                     <?php $bg = get_sub_field('background_image');?>
+                    <?php $actif = get_sub_field('actif');?>
                     <?php $cta = get_sub_field('liens');?>
 
-                    <?php if($bg):?>
+                    <?php if($actif):?>
                     <div class="swiper-slide">
                         <img src="<?php echo $bg['url'];?>" alt="bg_slider" />
                         <div class="content">
