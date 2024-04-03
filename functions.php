@@ -70,13 +70,16 @@ function fix_svg() {
 
                 $post['permalink'] = $permalink;
                 $result[] = $post;
+
+
+                wp_send_json_success($result);
             }
         else: 
             $result = 'Aucun résultat';
+            wp_send_json_error($result);
         endif;
     endif;
 
-    wp_send_json_success($result);
     wp_die();
 }
 

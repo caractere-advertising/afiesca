@@ -12,7 +12,7 @@ $("#searchbar").keyup(function (e) {
         action: "searchbar",
         q: value,
       },
-      fail: function () {
+      error: function () {
         console.log("Error");
       },
       success: function (response) {
@@ -26,7 +26,7 @@ $("#searchbar").keyup(function (e) {
 
             var html = "";
 
-            for (var i = 0; i < data.length; i++) {
+            for (var i = 1; i < data.length; i++) {
               var resultList = data[i];
               //console.log(resultList.post_title);
               html +=
@@ -43,6 +43,10 @@ $("#searchbar").keyup(function (e) {
           $("#displayResult").html(html);
         } else {
           console.log("Erreur lors de la recherche : " + response.data);
+
+          var html = "<p>" + response.data + "</p>";
+
+          $("#displayResult").html(html);
         }
       },
     });
