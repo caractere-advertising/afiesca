@@ -9,6 +9,10 @@
     </div>
     <div class="col-d">
         <div class="secondary-navigation">
+            <div id="searchBarDiv">
+                <input type="text" id="searchbar" style="border:none;border-bottom:1px solid #eee; color:#fff; background: none; outline:none;" placeholder="Rechercher..."/>
+                <div id="displayResult"></div>
+            </div>
             <?php wp_nav_menu(array(
                 'menu' => 'top-header_menu',
                 'theme_location' => 'topheader',

@@ -43,3 +43,41 @@ function fix_svg() {
 }
   add_filter( 'upload_mimes', 'cc_mime_types' );
   add_action( 'admin_head', 'fix_svg' );
+
+  add_action( 'wp_ajax_nopriv_searchbar', 'searchbar' );
+  add_action( 'wp_ajax_searchbar', 'searchbar');
+  
+  function searchbar(){
+    global $wpdb;
+
+    if($_POST):
+        $q = sanitize_text_field($_POST['q']);
+    endif;
+    $table = $wpdb->prefix.'posts';
+    $result = array();
+
+    if($q):
+        $req = $wpdb->get_results("SELECT * FROM $table WHERE `post_title` LIKE '%$q%' AND `post_status` = 'publish' AND `post_type` IN ('page','post')", ARRAY_A);
+
+        if($req):
+            foreach ($req as $post) {
+                // Récupérer l'URL en fonction du type de contenu
+                if ($post['post_type'] == 'page') {
+                    $permalink = get_page_link($post['ID']);
+                } else {
+                    $permalink = get_permalink($post['ID']);
+                }
+
+                $post['permalink'] = $permalink;
+                $result[] = $post;
+            }
+        else: 
+            $result = 'Aucun résultat';
+        endif;
+    endif;
+
+    wp_send_json_success($result);
+    wp_die();
+}
+
+  

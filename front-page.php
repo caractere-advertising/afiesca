@@ -11,7 +11,7 @@
                     <?php $actif = get_sub_field('actif');?>
                     <?php $cta = get_sub_field('liens');?>
 
-                    <?php if($actif):?>
+                    <?php if($actif == true ):?>
                     <div class="swiper-slide">
                         <img src="<?php echo $bg['url'];?>" alt="bg_slider" />
                         <div class="content">

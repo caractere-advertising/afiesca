@@ -193,6 +193,39 @@
   }
 }
 
+#searchBarDiv {
+  position: relative;
+  margin-right: 50px;
+
+  #searchbar {
+    font-family: "Montserrat", sans-serif;
+    border-bottom: 1px solid $primary-color;
+    line-height: 30px;
+    font-size: 0.9rem;
+  }
+
+  #displayResult {
+    height: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50px;
+    background-color: $light;
+    border-radius: 5px solid $light-gray;
+    z-index: 999;
+
+    width: 300px;
+
+    a,
+    p {
+      color: $primary-color;
+      padding: 10px 20px;
+      border-bottom: 1px solid;
+      font-size: 0.9rem;
+    }
+  }
+}
+
 .megamenu {
   display: none;
   opacity: 0;
