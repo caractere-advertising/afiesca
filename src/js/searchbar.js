@@ -7,7 +7,7 @@ $("#searchbar").keyup(function (e) {
     $.ajax({
       type: "POST",
       datatype: "json",
-      url: "http://localhost:10028/wp-admin/admin-ajax.php",
+      url: "https://afiesca.caractere-advertising.be/wp-admin/admin-ajax.php",
       data: {
         action: "searchbar",
         q: value,
