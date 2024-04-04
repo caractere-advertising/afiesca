@@ -52,3 +52,12 @@ $("#searchbar").keyup(function (e) {
     });
   }
 });
+
+$(document).mouseup(function (e) {
+  var container = $("#displayResult");
+
+  // Si le clic n'est pas dans la div #displayResult ou l'un de ses enfants
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+    container.hide();
+  }
+});
