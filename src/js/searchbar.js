@@ -1,5 +1,5 @@
 $("#searchbar").keyup(function (e) {
-  e.preventDefault;
+  e.preventDefault();
 
   var value = $("#searchbar").val();
 
@@ -22,41 +22,39 @@ $("#searchbar").keyup(function (e) {
           var data = response.data;
 
           if (data.length > 0) {
-            //console.log(data.length);
-
             var html = "";
 
             for (var i = 0; i < data.length; i++) {
               var resultList = data[i];
-              //console.log(resultList.post_title);
               html +=
                 "<a href='" +
                 resultList.permalink +
                 "'>" +
                 resultList.post_title +
-                "</a>"; // Vous pouvez utiliser d'autres propriétés de l'objet item selon vos besoins
+                "</a>";
             }
           } else {
             html = "<p>Aucun résultat trouvé</p>";
           }
 
           $("#displayResult").html(html);
+          $("#displayResult").show(); // Afficher la div displayResult
         } else {
           console.log("Erreur lors de la recherche : " + response.data);
-
           var html = "<p>" + response.data + "</p>";
-
           $("#displayResult").html(html);
+          $("#displayResult").show(); // Afficher la div displayResult
         }
       },
     });
+  } else {
+    $("#displayResult").hide(); // Masquer la div displayResult si la longueur de value est égale à zéro
   }
 });
 
+// Cacher displayResult lors d'un clic en dehors
 $(document).mouseup(function (e) {
   var container = $("#displayResult");
-
-  // Si le clic n'est pas dans la div #displayResult ou l'un de ses enfants
   if (!container.is(e.target) && container.has(e.target).length === 0) {
     container.hide();
   }
