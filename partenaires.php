@@ -7,10 +7,7 @@ $bg_header = get_field('bg_header');
 $titre = get_field('titre');
 $surtitre = get_field('surtitre');
 $intro = get_field('introduction');
-$section_bleue = get_field('section_bleue-infos');
-$outro = get_field('outro-infos');
 
-$def = get_field('liste_expli');
 
 if(!$bg_header):
     $bg_url = get_template_directory_uri(  ).'/assets/img/bg-default.jpg';
@@ -26,10 +23,10 @@ get_template_part( 'templates-parts/header-nav');?>
 
 <section id="interactivMap">
     <div class="container">
-        <?php $images = get_field('images-card');
+        <?php $images = get_field('images-map');
 
         if($images):?>
-            <div id="my-interactive-image" style="background:url('<?php echo $images['url'];?>'); width:100%;background-size:contain;"></div>
+            <div id="my-interactive-image" style="background:url('<?php echo $images['url'];?>'); width:100%;background-size:contain;height:700px"></div>
         <?php endif;?>
 
         <div class="result">
