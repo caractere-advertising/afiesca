@@ -33,7 +33,7 @@ get_template_part( 'templates-parts/header-nav');?>
             <?php 
             if(have_rows('provinces')):
                 while(have_rows('provinces')): the_row();
-                    $name = get_sub_field('name');
+                    $name = get_sub_field('nom');
                     $informations = get_sub_field('informations');?>
                        
                     <div class="card">
