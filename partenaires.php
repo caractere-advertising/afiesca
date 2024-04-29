@@ -57,7 +57,7 @@ get_template_part( 'templates-parts/header-nav');?>
         <?php endif;?>
 
         <div class="result">
-            <h1 class="subtitle">Votre account manager</h1>
+            <h1 class="subtitle red upp bold">Votre account manager</h1>
             
             <?php if (have_rows('provinces')) : ?>
                 <?php while (have_rows('provinces')) : the_row(); ?>
