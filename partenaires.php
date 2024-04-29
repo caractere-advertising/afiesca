@@ -20,14 +20,22 @@ $clients = get_field('provinces');
 
 // Initialisez un tableau vide pour stocker les items
 $items = array();
+$items_mob = array();
+$items_tab = array();
 
 // Parcourez les données des clients
 if ($clients) {
     foreach ($clients as $client) {
         $name = $client['nom'];
         $info = $client['informations'];
-        $left = $client['position_left'];
-        $top = $client['position_top'];
+        $left = $client['position_left']['desktop'];
+        $top = $client['coordonnees_top'];
+
+        $taleft = $client['position_left-tab'];
+        $tatop = $client['position_left']['tablet'];
+        
+        $moleft = $client['position_left-mob'];
+        $motop = $client['position_left']['mobile'];
         
         // Ajoutez un nouvel objet à la tableau items pour chaque client
         $items[] = array(
@@ -35,8 +43,28 @@ if ($clients) {
             'title' => $name,
             'description' => $info,
             'position' => array(
-                'left' => $left,
-                'top' => $top
+                'left' => $left['desktop'],
+                'top' => $top['desktop'];
+            )
+        );
+
+        $items_tab[] = array(
+            'type' => 'text',
+            'title' => $name,
+            'description' => $info,
+            'position' => array(
+                'left' => $taleft,
+                'top' => $tatop
+            )
+        );
+
+        $items_mob[] = array(
+            'type' => 'text',
+            'title' => $name,
+            'description' => $info,
+            'position' => array(
+                'left' => $moleft,
+                'top' => $motop
             )
         );
     }
@@ -53,7 +81,11 @@ get_template_part( 'templates-parts/header-nav');?>
 
         if($images):?>
             <div id="my-interactive-image" style="background:url('<?php echo $images['url'];?>'); background-size:contain;background-repeat:no-repeat;background-position:center"></div>
-        <?php endif;?>
+            <div id="my-interactive-image-tablet" style="background:url('<?php echo $images['url'];?>'); background-size:contain;background-repeat:no-repeat;background-position:center"></div>
+            <div id="my-interactive-image-mobile" style="background:url('<?php echo $images['url'];?>'); background-size:contain;background-repeat:no-repeat;background-position:center"></div>
+
+
+            <?php endif;?>
 
         <div class="result" id="result-account-manager">
             <h1 class="subtitle red upp bold">Votre account manager</h1>
@@ -100,6 +132,8 @@ get_template_part( 'templates-parts/header-nav');?>
     // Items collection
     $(document).ready(function() {
         var items = <?php echo json_encode($items); ?>;
+        var items_tablet = <?php echo json_encode($items_tab);?>
+        var items_mobile = <?php echo json_encode($items_mob);?>
 
         var options = {
             allowHtml: true,
@@ -109,27 +143,33 @@ get_template_part( 'templates-parts/header-nav');?>
         
         // Plugin activation
     $("#my-interactive-image").interactiveImage(items, options);
+    $("#my-interactive-image-tablet").interactiveImage(items_tablet, options);
+    $("#my-interactive-image-mobile").interactiveImage(items_mobile, options);
 
-// Gestionnaire d'événements pour afficher les informations du client
-$('#my-interactive-image').on('click', '.hotspot', function() {
-    var index = $(this).index();
-    
-    // Masquer toutes les cartes
-    $('.result .card').hide();
-    $('.result .card[data-index="' + index + '"]').show();
-    
-    // Faire défiler la page verticalement de 150px
-    $('html, body').animate({
-        scrollTop: $('.result .card[data-index="' + index + '"]').offset().top - 150
-    }, 700); // Durée de l'animation en millisecondes (500ms)
-});
+    // Définition de la fonction pour activer la carte
+    function activeCard() {
+        var index = $(this).index();
+        
+        $('.result .card').hide();
+        $('.result .card[data-index="' + index + '"]').show();
+        
+        $('html, body').animate({
+            scrollTop: $('.result .card[data-index="' + index + '"]').offset().top - 150
+        }, 700);
+    }
 
-// Cachez les informations du client lorsqu'on clique en dehors des marqueurs
-$('#map-container').on('click', function(event) {
-        if (!$(event.target).closest('.hotspot').length) {
-            $('.result .card').hide(); // Masquez toutes les cartes
-        }
-    });
+    // Gestionnaire d'événements pour afficher les informations du client sur desktop et tablette
+    $('#my-interactive-image').on('click', '.hotspot', activeCard);
+    $('#my-interactive-image-tablet').on('click', '.hotspot', activeCard);
+    $('#my-interactive-image-mobile').on('click', '.hotspot', activeCard);
+    
+
+    // Cachez les informations du client lorsqu'on clique en dehors des marqueurs
+    $('#map-container').on('click', function(event) {
+            if (!$(event.target).closest('.hotspot').length) {
+                $('.result .card').hide(); // Masquez toutes les cartes
+            }
+        });
     });
 </script>
 

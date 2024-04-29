@@ -1,4 +1,6 @@
-#my-interactive-image{
+#my-interactive-image,
+#my-interactive-image-tablet
+#my-interactive-image-mobile{
     width:100%;
     max-width: 930px;
     height:700px;
@@ -15,6 +17,8 @@
         display: none !important;
     }
 }
+
+#ma
 
 #result-account-manager{
     padding-bottom: 100px;
