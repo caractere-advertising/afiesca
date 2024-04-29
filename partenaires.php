@@ -31,9 +31,6 @@ if ($clients) {
         
         // Ajoutez un nouvel objet à la tableau items pour chaque client
         $items[] = array(
-            'type' => 'text',
-            'title' => $name,
-            'description' => $info,
             'position' => array(
                 'left' => $left,
                 'top' => $top
