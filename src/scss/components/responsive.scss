@@ -688,10 +688,7 @@
     }
   }
 
-  .red {
-    letter-spacing: 3px;
-    font-size: 0.8rem;
-  }
+  
 
   #result-account-manager{
     h2{
@@ -702,6 +699,15 @@
     .am-content{
       padding-left: 0;
       margin: 40px auto;
+
+      .red {
+        letter-spacing: 1px !important;
+        font-size: 0.8rem;
+      }
+    }
+
+    .description{
+      padding: 0;
     }
   }
 }
