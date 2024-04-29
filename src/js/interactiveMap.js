@@ -17,7 +17,12 @@ function updateHotspotsPosition() {
     });
 }
 
-// Appeler la fonction de mise à jour des hotspots lors du chargement de la page et lors du redimensionnement de la fenêtre
-$(window).on('load resize', function() {
+// Appeler la fonction de mise à jour des hotspots après le chargement de la page
+$(document).ready(function() {
+    updateHotspotsPosition();
+});
+
+// Appeler la fonction de mise à jour des hotspots lors du redimensionnement de la fenêtre
+$(window).on('resize', function() {
     updateHotspotsPosition();
 });
