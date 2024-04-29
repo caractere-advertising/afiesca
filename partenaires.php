@@ -44,7 +44,7 @@ if ($clients) {
             'description' => $info,
             'position' => array(
                 'left' => $left['desktop'],
-                'top' => $top['desktop'];
+                'top' => $top['desktop']
             )
         );
 
