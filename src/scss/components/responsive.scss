@@ -29,6 +29,8 @@
 
   #my-interactive-image-tablet{
     display: block;
+    min-width: 500px;
+    max-width: 500px;
   }
 }
 
@@ -691,7 +693,8 @@
   #my-interactive-image-mobile {
     display: block;
     width: 100%;
-    max-width: 930px;
+    max-width: 320px;
+    min-width: 320px;
     height: 250px;
     margin: auto;
     margin-top: -50px;
