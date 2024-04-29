@@ -53,7 +53,7 @@ get_template_part( 'templates-parts/header-nav');?>
         <?php $images = get_field('images-map');
 
         if($images):?>
-            <div id="my-interactive-image" style="background:url('<?php echo $images['url'];?>'); width:100%;background-size:contain;height:700px;background-repeat:no-repeat;background-position:center"></div>
+            <div id="my-interactive-image" style="background:url('<?php echo $images['url'];?>'); background-size:contain;background-repeat:no-repeat;background-position:center"></div>
         <?php endif;?>
 
         <div class="result">
