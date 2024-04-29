@@ -31,6 +31,7 @@ if ($clients) {
         
         // Ajoutez un nouvel objet à la tableau items pour chaque client
         $items[] = array(
+            'type' => 'text',
             'position' => array(
                 'left' => $left,
                 'top' => $top
@@ -93,21 +94,20 @@ get_template_part( 'templates-parts/header-nav');?>
         }
         
         // Plugin activation
-        $("#my-interactive-image").interactiveImage(items, options);
+    $("#my-interactive-image").interactiveImage(items, options);
 
-        // Gestionnaire d'événements pour afficher les informations du client
-        $('#my-interactive-image').on('click', '.interactive-point', function() {
-            var index = $(this).index();
-            var clientInfo = items[index];
-            $('#client-info').html('<h3>' + clientInfo.title + '</h3><p>' + clientInfo.description + '</p>').show();
-        });
+// Gestionnaire d'événements pour afficher les informations du client
+$('#my-interactive-image').on('click', '.interactive-point', function() {
+    var index = $(this).index();
+    $('.result .card').eq(index).show();
+});
 
-        // Cachez les informations du client lorsqu'on clique en dehors des marqueurs
-        $('#map-container').on('click', function(event) {
-            if (!$(event.target).closest('.interactive-point').length) {
-                $('#client-info').hide();
-            }
-        });
+// Cachez les informations du client lorsqu'on clique en dehors des marqueurs
+$('#map-container').on('click', function(event) {
+    if (!$(event.target).closest('.interactive-point').length) {
+        $('.result .card').hide();
+    }
+});
     });
 </script>
 
