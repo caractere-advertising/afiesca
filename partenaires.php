@@ -37,12 +37,10 @@ if ($clients) {
             'position' => array(
                 'left' => $left,
                 'top' => $top
-            ),
-            'customClassName' => "my-custom-css-class"
+            )
         );
     }
 }
-
 
 get_template_part( 'templates-parts/header-nav');?>
 <header id="header" style="background:url('<?php echo $bg_url;?>');"></header>
@@ -80,7 +78,8 @@ get_template_part( 'templates-parts/header-nav');?>
                             <?php endif;?>
                         </div>
                     </div>
-                <?php $i = $i + 2;?>
+                <?php $i += 2;?>
+                <!-- Incrémenter de 2 pour tenir compte des hotspots et des éléments item suivants -->
                 <?php endwhile; ?>
             <?php endif; ?>
 
