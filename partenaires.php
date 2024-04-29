@@ -72,7 +72,7 @@ get_template_part( 'templates-parts/header-nav');?>
                             <div class="description"><?php echo $informations; ?></div>
                         <?php endif; ?>
                         <?php if($cta):?>
-                            <a href="mailto:<?php echo $cta;?>" class="cta-border">Contact par email</a>
+                            <a href="mailto:<?php echo $cta;?>" class="cta cta-border round">Contact par email</a>
                         <?php endif;?>
                     </div>
                 <?php endwhile; ?>
