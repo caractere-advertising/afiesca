@@ -16,17 +16,44 @@ else :
     $bg_url = $bg_header['url'];
 endif;
 
+$clients = get_field('provinces');
+
+// Initialisez un tableau vide pour stocker les items
+$items = array();
+
+// Parcourez les données des clients
+if ($clients) {
+    foreach ($clients as $client) {
+        $name = $client['nom'];
+        $info = $client['informations'];
+        $left = $client['position_left'];
+        $top = $client['position_top'];
+        
+        // Ajoutez un nouvel objet à la tableau items pour chaque client
+        $items[] = array(
+            'type' => 'text',
+            'title' => $name,
+            'description' => $info,
+            'position' => array(
+                'left' => $left,
+                'top' => $top
+            )
+        );
+    }
+}
+
+
 get_template_part( 'templates-parts/header-nav');?>
 <header id="header" style="background:url('<?php echo $bg_url;?>');"></header>
 
 
 <section id="interactivMap">
     <div class="container">
-        <?php $images = get_field('images-map');?>
+        <?php $images = get_field('images-map');
 
-        
-            <div id="my-interactive-image" <?php if($images):?> style="background:url('<?php echo $images['url'];?>'); width:100%;background-size:contain;height:700px;background-repeat:no-repeat;background-position:center"<?php endif;?>></div>
-        
+        if($images):?>
+            <div id="my-interactive-image" style="background:url('<?php echo $images['url'];?>'); width:100%;background-size:contain;height:700px;background-repeat:no-repeat;background-position:center"></div>
+        <?php endif;?>
 
         <div class="result">
             <?php if (have_rows('provinces')) : ?>
@@ -46,5 +73,38 @@ get_template_part( 'templates-parts/header-nav');?>
         </div>
     </div>
 </section>
+
+
+
+
+<script>
+    // Items collection
+    $(document).ready(function() {
+        var items = <?php echo json_encode($items); ?>;
+
+        var options = {
+            allowHtml: true,
+            triggerEvent: 'click',
+            shareBox: false,
+        }
+        
+        // Plugin activation
+        $("#my-interactive-image").interactiveImage(items, options);
+
+        // Gestionnaire d'événements pour afficher les informations du client
+        $('#my-interactive-image').on('click', '.interactive-point', function() {
+            var index = $(this).index();
+            var clientInfo = items[index];
+            $('#client-info').html('<h3>' + clientInfo.title + '</h3><p>' + clientInfo.description + '</p>').show();
+        });
+
+        // Cachez les informations du client lorsqu'on clique en dehors des marqueurs
+        $('#map-container').on('click', function(event) {
+            if (!$(event.target).closest('.interactive-point').length) {
+                $('#client-info').hide();
+            }
+        });
+    });
+</script>
 
 <?php get_footer();
