@@ -51,12 +51,13 @@ get_template_part( 'templates-parts/header-nav');?>
 <section id="interactivMap">
     <div class="container">
         <?php $images = get_field('images-map');
+        $description = get_field('description');
 
         if($images):?>
             <div id="my-interactive-image" style="background:url('<?php echo $images['url'];?>'); background-size:contain;background-repeat:no-repeat;background-position:center"></div>
         <?php endif;?>
 
-        <div class="result">
+        <div class="result" id="result-account-manager">
             <h1 class="subtitle red upp bold">Votre account manager</h1>
             
             <?php if (have_rows('provinces')) : ?>
@@ -68,15 +69,20 @@ get_template_part( 'templates-parts/header-nav');?>
                         <?php if ($name) : ?>
                             <?php echo $name; ?>
                         <?php endif; ?>
-                        <?php if ($informations) : ?>
-                            <div class="red upp bold"><?php echo $informations; ?></div>
-                        <?php endif; ?>
-                        <?php if($cta):?>
-                            <a href="mailto:<?php echo $cta;?>" class="cta cta-border round">Contact par email</a>
-                        <?php endif;?>
+
+                        <div class="am-content">
+                            <?php if ($informations) : ?>
+                                <div class="red upp bold"><?php echo $informations; ?></div>
+                            <?php endif; ?>
+                            <?php if($cta):?>
+                                <a href="mailto:<?php echo $cta;?>" class="cta cta-border round">Contact par email</a>
+                            <?php endif;?>
+                        </div>
                     </div>
                 <?php endwhile; ?>
             <?php endif; ?>
+
+            <?php if($description): echo $description;endif;?>
         </div>
     </div>
 </section>

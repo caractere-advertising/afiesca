@@ -11,3 +11,18 @@
         animation : pulse ease-in 300ms infinite;
     }
 }
+
+#result-account-manager{
+    h2{
+        color:$secondary-color;
+    }
+    .am-content{
+        padding-left: 25%;
+        margin-top: 60px;        
+
+        p{
+            color:$primary-color;
+            font-size: .9rem;
+        }
+    }
+}
