@@ -64,12 +64,16 @@ get_template_part( 'templates-parts/header-nav');?>
                     <div class="card">
                         <?php $name = get_sub_field('nom'); ?>
                         <?php $informations = get_sub_field('informations'); ?>
+                        <?php $cta = get_sub_field('email');?>
                         <?php if ($name) : ?>
-                            <h3>Pour les provinces de <strong><?php echo $name; ?></strong></h3>
+                            <h3 class="red upp bold">Pour <strong><?php echo $name; ?></strong></h3>
                         <?php endif; ?>
                         <?php if ($informations) : ?>
                             <div class="description"><?php echo $informations; ?></div>
                         <?php endif; ?>
+                        <?php if($cta):?>
+                            <a href="mailto:<?php echo $cta;?>" class="cta-border">Contact par email</a>
+                        <?php endif;?>
                     </div>
                 <?php endwhile; ?>
             <?php endif; ?>
