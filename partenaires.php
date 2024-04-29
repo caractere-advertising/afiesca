@@ -28,14 +28,14 @@ if ($clients) {
     foreach ($clients as $client) {
         $name = $client['nom'];
         $info = $client['informations'];
-        $left = $client['position_left'];
+        $left = $client['coordonnees_left']['desktop'];
         $top = $client['coordonnees_top']['desktop'];
 
-        $taleft = $client['position_left-tab'];
-        $tatop = $client['position_left']['tablet'];
+        $taleft = $client['coordonnees_left']['tablet'];
+        $tatop = $client['coordonnees_top']['tablet'];
         
-        $moleft = $client['position_left-mob'];
-        $motop = $client['position_left']['mobile'];
+        $moleft = $client['coordonnees_left']['mobile'];
+        $motop = $client['coordonnees_top']['mobile'];
         
         // Ajoutez un nouvel objet à la tableau items pour chaque client
         $items[] = array(
