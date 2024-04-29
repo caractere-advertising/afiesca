@@ -30,25 +30,31 @@ get_template_part( 'templates-parts/header-nav');?>
         <?php endif;?>
 
         <div class="result">
-            <?php 
-            if(have_rows('provinces')):
-                while(have_rows('provinces')): the_row();
-                    $name = get_sub_field('nom');
-                    $informations = get_sub_field('informations');?>
-                       
+            <?php if (have_rows('provinces')) : ?>
+                <?php while (have_rows('provinces')) : the_row(); ?>
                     <div class="card">
-                        <?php if($name): echo $name;endif;?>
-                        <?php if($informations): echo $informations; endif;?>
+                        <?php $name = get_sub_field('nom'); ?>
+                        <?php $informations = get_sub_field('informations'); ?>
+                        <?php if ($name) : ?>
+                            <h3><?php echo $name; ?></h3>
+                        <?php endif; ?>
+                        <?php if ($informations) : ?>
+                            <div class="description"><?php echo $informations; ?></div>
+                        <?php endif; ?>
                     </div>
-                <?php endwhile;
-            endif;?>
-
+                <?php endwhile; ?>
+            <?php endif; ?>
         </div>
     </div>
 </section>
 
+
+
+
 <script>
 // Items collection
+
+
 var items = [
     <?php
     if(have_rows('provinces')):
@@ -61,7 +67,7 @@ var items = [
             {
                 type: "text",
                 title: "<?php echo $name;?>",
-                description: "<?php print_r($informations);?>",
+                description: "<?php echo $informations;?>",
                 position: {
                     left: <?php echo $left;?>,
                     top: <?php echo $top;?>
