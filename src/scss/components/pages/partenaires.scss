@@ -10,6 +10,10 @@
         color: $primary-color;
         animation : pulse ease-in 300ms infinite;
     }
+
+    .item{
+        display: none !important;
+    }
 }
 
 #result-account-manager{
