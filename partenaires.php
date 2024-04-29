@@ -95,8 +95,6 @@ get_template_part( 'templates-parts/header-nav');?>
     <?php get_template_part( 'templates-parts/line-separator');?>
 </section>
 
-
-
 <script>
     // Items collection
     $(document).ready(function() {
@@ -112,14 +110,14 @@ get_template_part( 'templates-parts/header-nav');?>
     $("#my-interactive-image").interactiveImage(items, options);
 
 // Gestionnaire d'événements pour afficher les informations du client
-$('#my-interactive-image').on('click', '.interactive-point', function() {
+$('#my-interactive-image').on('click', '.hotspot', function() {
     var index = $(this).index();
     $('.result .card').eq(index).show();
 });
 
 // Cachez les informations du client lorsqu'on clique en dehors des marqueurs
 $('#map-container').on('click', function(event) {
-    if (!$(event.target).closest('.interactive-point').length) {
+    if (!$(event.target).closest('.hotspot').length) {
         $('.result .card').hide();
     }
 });
