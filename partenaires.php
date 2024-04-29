@@ -66,7 +66,7 @@ get_template_part( 'templates-parts/header-nav');?>
                         <?php $informations = get_sub_field('informations'); ?>
                         <?php $cta = get_sub_field('email');?>
                         <?php if ($name) : ?>
-                            <h3>Pour <strong><?php echo $name; ?></strong></h3>
+                            <?php echo $name; ?>
                         <?php endif; ?>
                         <?php if ($informations) : ?>
                             <div class="red upp bold"><?php echo $informations; ?></div>
