@@ -61,18 +61,21 @@ var items = [
             {
                 type: "text",
                 title: "<?php echo $name;?>",
-                description: "<?php echo $informations;?>",
+                description: "<?php print_r($informations);?>",
                 position: {
                     left: <?php echo $left;?>,
                     top: <?php echo $top;?>
                 }
             }
         <?php endwhile;
-    endif;?>
+    endif;?>,
+    customClassName: "card"
   ];
 
   var options = {
-    allowHtml: true
+    allowHtml: true,
+    triggerEvent: 'click',
+    shareBox: false,
   }
   
   // Plugin activation
