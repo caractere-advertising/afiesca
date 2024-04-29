@@ -132,8 +132,8 @@ get_template_part( 'templates-parts/header-nav');?>
     // Items collection
     $(document).ready(function() {
         var items = <?php echo json_encode($items); ?>;
-        var items_tablet = <?php echo json_encode($items_tab);?>
-        var items_mobile = <?php echo json_encode($items_mob);?>
+        var items_tablet = <?php echo json_encode($items_tab);?>;
+        var items_mobile = <?php echo json_encode($items_mob);?>;
 
         var options = {
             allowHtml: true,
