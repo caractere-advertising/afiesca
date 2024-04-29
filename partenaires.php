@@ -37,7 +37,8 @@ if ($clients) {
             'position' => array(
                 'left' => $left,
                 'top' => $top
-            )
+            ),
+            'customClassName' => "my-custom-css-class"
         );
     }
 }
