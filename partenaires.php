@@ -33,6 +33,7 @@ if ($clients) {
         $items[] = array(
             'type' => 'text',
             'title' => $name,
+            'description' => $info,
             'position' => array(
                 'left' => $left,
                 'top' => $top
