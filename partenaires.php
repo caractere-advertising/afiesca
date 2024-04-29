@@ -47,4 +47,35 @@ get_template_part( 'templates-parts/header-nav');?>
     </div>
 </section>
 
+<script>
+// Items collection
+var items = [
+    <?php
+    if(have_rows('provinces')):
+        while(have_rows('provinces')): the_row();
+            $name = get_sub_field('nom');
+            $informations = get_sub_field('informations');
+            $left = get_sub_field('position_left');
+            $top = get_sub_field('position_top');?>
+                   
+            {
+                type: "text",
+                title: "<?php echo $name;?>",
+                description: "<?php echo $informations;?>",
+                position: {
+                    left: <?php echo $left;?>,
+                    top: <?php echo $top;?>
+                }
+            }
+        <?php endwhile;
+    endif;?>
+  ];
+  
+  // Plugin activation
+  $(document).ready(function() {
+    $("#my-interactive-image").interactiveImage(items);
+  });
+
+</script>
+
 <?php get_footer();
