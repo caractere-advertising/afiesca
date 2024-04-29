@@ -74,35 +74,4 @@ get_template_part( 'templates-parts/header-nav');?>
     </div>
 </section>
 
-
-<script>
-    // Items collection
-    jQuery(document).ready(function($) {
-        var items = <?php echo json_encode($items); ?>;
-
-        var options = {
-            allowHtml: true,
-            triggerEvent: 'click',
-            shareBox: false,
-        };
-        
-        // Plugin activation
-        $("#my-interactive-image").interactiveImage(items, options);
-
-        // Gestionnaire d'événements pour afficher les informations du client
-        $('#my-interactive-image').on('click', '.interactive-point', function() {
-            var index = $(this).index();
-            var clientInfo = items[index];
-            $('#client-info').html('<h3>' + clientInfo.title + '</h3><p>' + clientInfo.description + '</p>').show();
-        });
-
-        // Cachez les informations du client lorsqu'on clique en dehors des marqueurs
-        $('#map-container').on('click', function(event) {
-            if (!$(event.target).closest('.interactive-point').length) {
-                $('#client-info').hide();
-            }
-        });
-    });
-</script>
-
 <?php get_footer();
