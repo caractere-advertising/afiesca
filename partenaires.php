@@ -16,33 +16,6 @@ else :
     $bg_url = $bg_header['url'];
 endif;
 
-$clients = get_field('provinces');
-
-// Initialisez un tableau vide pour stocker les items
-$items = array();
-
-// Parcourez les données des clients
-if ($clients) {
-    foreach ($clients as $client) {
-        $name = $client['nom'];
-        $info = $client['informations'];
-        $left = $client['position_left'];
-        $top = $client['position_top'];
-        
-        // Ajoutez un nouvel objet à la tableau items pour chaque client
-        $items[] = array(
-            'type' => 'text',
-            'title' => $name,
-            'description' => $info,
-            'position' => array(
-                'left' => $left,
-                'top' => $top
-            )
-        );
-    }
-}
-
-
 get_template_part( 'templates-parts/header-nav');?>
 <header id="header" style="background:url('<?php echo $bg_url;?>');"></header>
 
