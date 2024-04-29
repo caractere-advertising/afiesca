@@ -113,10 +113,15 @@ get_template_part( 'templates-parts/header-nav');?>
 // Gestionnaire d'événements pour afficher les informations du client
 $('#my-interactive-image').on('click', '.hotspot', function() {
     var index = $(this).index();
-    console.log(index);
     
-    $('.result .card').hide(); // Masquez toutes les cartes
-    $('.result .card[data-index="' + index + '"]').show(); // Aff
+    // Masquer toutes les cartes
+    $('.result .card').hide();
+    $('.result .card[data-index="' + index + '"]').show();
+    
+    // Faire défiler la page verticalement de 150px
+    $('html, body').animate({
+        scrollTop: $('.result .card[data-index="' + index + '"]').offset().top - 150
+    }, 700); // Durée de l'animation en millisecondes (500ms)
 });
 
 // Cachez les informations du client lorsqu'on clique en dehors des marqueurs
