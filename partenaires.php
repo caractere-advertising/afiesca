@@ -75,8 +75,6 @@ get_template_part( 'templates-parts/header-nav');?>
 </section>
 
 
-
-
 <script>
     // Items collection
     $(document).ready(function() {
@@ -86,7 +84,7 @@ get_template_part( 'templates-parts/header-nav');?>
             allowHtml: true,
             triggerEvent: 'click',
             shareBox: false,
-        }
+        };
         
         // Plugin activation
         $("#my-interactive-image").interactiveImage(items, options);
