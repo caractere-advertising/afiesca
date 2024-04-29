@@ -1,4 +1,3 @@
-$(document).ready(function() {
     var items = [
         {
             position: {
@@ -24,18 +23,19 @@ $(document).ready(function() {
     };
     
     // Plugin activation
-    $("#my-interactive-image").interactiveImage(items, options);
+    $(document).ready(function() {
+        $("#my-interactive-image").interactiveImage(items, options);
 
-    // Gestionnaire d'événements pour afficher les informations du client
-    $('#my-interactive-image').on('click', '.interactive-point', function() {
-        var index = $(this).index();
-        $('.result .card').eq(index).show();
-    });
+        // Gestionnaire d'événements pour afficher les informations du client
+        $('#my-interactive-image').on('click', '.interactive-point', function() {
+            var index = $(this).index();
+            $('.result .card').eq(index).show();
+        });
 
-    // Cachez les informations du client lorsqu'on clique en dehors des marqueurs
-    $('#map-container').on('click', function(event) {
-        if (!$(event.target).closest('.interactive-point').length) {
-            $('.result .card').hide();
-        }
+        // Cachez les informations du client lorsqu'on clique en dehors des marqueurs
+        $('#map-container').on('click', function(event) {
+            if (!$(event.target).closest('.interactive-point').length) {
+                $('.result .card').hide();
+            }
+        });
     });
-});
