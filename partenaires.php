@@ -61,7 +61,7 @@ var items = [
             {
                 type: "text",
                 title: "<?php echo $name;?>",
-                description: "<?php echo strip_tags($informations);?>",
+                description: "<?php echo $informations;?>",
                 position: {
                     left: <?php echo $left;?>,
                     top: <?php echo $top;?>
