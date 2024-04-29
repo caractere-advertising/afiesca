@@ -60,6 +60,8 @@ var items = [
                    
             {
                 type: "text",
+                title: "<?php echo $name;?>",
+                description: "<?php echo strip_tags($informations);?>",
                 position: {
                     left: <?php echo $left;?>,
                     top: <?php echo $top;?>
@@ -68,10 +70,14 @@ var items = [
         <?php endwhile;
     endif;?>
   ];
+
+  var options = {
+    allowHtml: true
+  }
   
   // Plugin activation
   $(document).ready(function() {
-    $("#my-interactive-image").interactiveImage(items);
+    $("#my-interactive-image").interactiveImage(items,options);
   });
 
 </script>
