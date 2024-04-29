@@ -17,6 +17,8 @@
 }
 
 #result-account-manager{
+    padding-bottom: 100px;
+
     h2{
         color:$secondary-color;
     }
@@ -31,6 +33,7 @@
         p{
             color:$primary-color;
             font-size: .9rem;
+            font-weight: 600;
         }
     }
 
@@ -42,4 +45,12 @@
 #grayBack{
     background-color: $light-gray;
     padding:1px;
+
+    .oblic_line{
+        margin: 100px auto;
+    }
+
+    .cta-border{
+        background: none;
+    }
 }
