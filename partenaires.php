@@ -61,8 +61,9 @@ get_template_part( 'templates-parts/header-nav');?>
             <h1 class="subtitle red upp bold">Votre account manager</h1>
             
             <?php if (have_rows('provinces')) : ?>
+                <?php $i = 1;?>
                 <?php while (have_rows('provinces')) : the_row(); ?>
-                    <div class="card">
+                    <div class="card" data-index="<?php echo $i;?>">
                         <?php $name = get_sub_field('nom'); ?>
                         <?php $informations = get_sub_field('informations'); ?>
                         <?php $cta = get_sub_field('email');?>
@@ -79,6 +80,7 @@ get_template_part( 'templates-parts/header-nav');?>
                             <?php endif;?>
                         </div>
                     </div>
+                <?php $i++;?>
                 <?php endwhile; ?>
             <?php endif; ?>
 
@@ -112,15 +114,18 @@ get_template_part( 'templates-parts/header-nav');?>
 // Gestionnaire d'événements pour afficher les informations du client
 $('#my-interactive-image').on('click', '.hotspot', function() {
     var index = $(this).index();
-    $('.result .card').eq(index).show();
+    console.log(index);
+    
+    $('.result .card').hide(); // Masquez toutes les cartes
+    $('.result .card[data-index="' + index + '"]').show(); // Aff
 });
 
 // Cachez les informations du client lorsqu'on clique en dehors des marqueurs
 $('#map-container').on('click', function(event) {
-    if (!$(event.target).closest('.hotspot').length) {
-        $('.result .card').hide();
-    }
-});
+        if (!$(event.target).closest('.hotspot').length) {
+            $('.result .card').hide(); // Masquez toutes les cartes
+        }
+    });
     });
 </script>
 
