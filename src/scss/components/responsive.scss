@@ -21,6 +21,15 @@
       }
     }
   }
+
+  #my-interactive-image,
+  #my-interactive-image-tablet{
+    display: none;
+  }
+
+  #my-interactive-image-tablet{
+    display: block;
+  }
 }
 
 /* CSS Mobile */
@@ -674,7 +683,13 @@
     padding-left: 10%;
   }
 
+  #my-interactive-image,
+  #my-interactive-image-tablet{
+      display: none;
+  }
+
   #my-interactive-image-mobile {
+    display: block;
     width: 100%;
     max-width: 930px;
     height: 250px;
