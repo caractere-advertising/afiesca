@@ -77,7 +77,7 @@ get_template_part( 'templates-parts/header-nav');?>
 
 <script>
     // Items collection
-    $(document).ready(function() {
+    jQuery(document).ready(function($) {
         var items = <?php echo json_encode($items); ?>;
 
         var options = {
