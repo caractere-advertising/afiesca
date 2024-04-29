@@ -80,7 +80,7 @@ get_template_part( 'templates-parts/header-nav');?>
                             <?php endif;?>
                         </div>
                     </div>
-                <?php $i + 2;?>
+                <?php $i = $i + 2;?>
                 <?php endwhile; ?>
             <?php endif; ?>
 
