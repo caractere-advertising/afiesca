@@ -69,7 +69,7 @@ get_template_part( 'templates-parts/header-nav');?>
                             <h3>Pour <strong><?php echo $name; ?></strong></h3>
                         <?php endif; ?>
                         <?php if ($informations) : ?>
-                            <div class="description red upp bold"><?php echo $informations; ?></div>
+                            <div class="red upp bold"><?php echo $informations; ?></div>
                         <?php endif; ?>
                         <?php if($cta):?>
                             <a href="mailto:<?php echo $cta;?>" class="cta cta-border round">Contact par email</a>
