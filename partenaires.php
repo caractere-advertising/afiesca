@@ -49,11 +49,11 @@ get_template_part( 'templates-parts/header-nav');?>
 
 <section id="interactivMap">
     <div class="container">
-        <?php $images = get_field('images-map');
+        <?php $images = get_field('images-map');?>
 
-        if($images):?>
-            <div id="my-interactive-image" style="background:url('<?php echo $images['url'];?>'); width:100%;background-size:contain;height:700px;background-repeat:no-repeat;background-position:center"></div>
-        <?php endif;?>
+        
+            <div id="my-interactive-image" <?php if($images):?> style="background:url('<?php echo $images['url'];?>'); width:100%;background-size:contain;height:700px;background-repeat:no-repeat;background-position:center"<?php endif;?>></div>
+        
 
         <div class="result">
             <?php if (have_rows('provinces')) : ?>
