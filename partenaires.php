@@ -16,6 +16,32 @@ else :
     $bg_url = $bg_header['url'];
 endif;
 
+$clients = get_field('provinces');
+
+// Initialisez un tableau vide pour stocker les items
+$items = array();
+
+// Parcourez les données des clients
+if ($clients) {
+    foreach ($clients as $client) {
+        $name = $client['nom'];
+        $info = $client['informations'];
+        $left = $client['position_left'];
+        $top = $client['position_top'];
+        
+        // Ajoutez un nouvel objet à la tableau items pour chaque client
+        $items[] = array(
+            'type' => 'text',
+            'title' => $name,
+            'description' => $info,
+            'position' => array(
+                'left' => $left,
+                'top' => $top
+            )
+        );
+    }
+}
+
 
 get_template_part( 'templates-parts/header-nav');?>
 <header id="header" style="background:url('<?php echo $bg_url;?>');"></header>
@@ -55,28 +81,7 @@ get_template_part( 'templates-parts/header-nav');?>
 // Items collection
 
 
-var items = [
-    <?php
-    if(have_rows('provinces')):
-        while(have_rows('provinces')): the_row();
-            $name = get_sub_field('nom');
-            $informations = get_sub_field('informations');
-            $left = get_sub_field('position_left');
-            $top = get_sub_field('position_top');?>
-                   
-            {
-                type: "text",
-                title: "<?php echo $name;?>",
-                description: "<?php echo $informations;?>",
-                position: {
-                    left: <?php echo $left;?>,
-                    top: <?php echo $top;?>
-                }
-            }
-        <?php endwhile;
-    endif;?>,
-    customClassName: "card"
-  ];
+    var items = <?php echo json_encode($items); ?>;
 
   var options = {
     allowHtml: true,
@@ -85,9 +90,21 @@ var items = [
   }
   
   // Plugin activation
-  $(document).ready(function() {
-    $("#my-interactive-image").interactiveImage(items,options);
-  });
+  $("#my-interactive-image").interactiveImage(items, options);
+
+// Gestionnaire d'événements pour afficher les informations du client
+$('#my-interactive-image').on('click', '.interactive-point', function() {
+    var index = $(this).index();
+    var clientInfo = items[index];
+    $('#client-info').html('<h3>' + clientInfo.title + '</h3><p>' + clientInfo.description + '</p>').show();
+});
+
+// Cachez les informations du client lorsqu'on clique en dehors des marqueurs
+$('#map-container').on('click', function(event) {
+    if (!$(event.target).closest('.interactive-point').length) {
+        $('#client-info').hide();
+    }
+});
 
 </script>
 
