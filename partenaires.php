@@ -28,8 +28,8 @@ if ($clients) {
     foreach ($clients as $client) {
         $name = $client['nom'];
         $info = $client['informations'];
-        $left = $client['position_left']['desktop'];
-        $top = $client['coordonnees_top'];
+        $left = $client['position_left'];
+        $top = $client['coordonnees_top']['desktop'];
 
         $taleft = $client['position_left-tab'];
         $tatop = $client['position_left']['tablet'];
