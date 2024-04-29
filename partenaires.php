@@ -57,13 +57,15 @@ get_template_part( 'templates-parts/header-nav');?>
         <?php endif;?>
 
         <div class="result">
+            <h1 class="subtitle">Votre account manager</h1>
+            
             <?php if (have_rows('provinces')) : ?>
                 <?php while (have_rows('provinces')) : the_row(); ?>
                     <div class="card">
                         <?php $name = get_sub_field('nom'); ?>
                         <?php $informations = get_sub_field('informations'); ?>
                         <?php if ($name) : ?>
-                            <h3><?php echo $name; ?></h3>
+                            <h3>Pour les provinces de <strong><?php echo $name; ?></strong></h3>
                         <?php endif; ?>
                         <?php if ($informations) : ?>
                             <div class="description"><?php echo $informations; ?></div>
