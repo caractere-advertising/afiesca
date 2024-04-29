@@ -82,11 +82,18 @@ get_template_part( 'templates-parts/header-nav');?>
                 <?php endwhile; ?>
             <?php endif; ?>
 
-            <?php if($description): echo $description;endif;?>
+            <div class="description">
+                <?php if($description): echo $description;endif;?>
+            </div>
         </div>
     </div>
 </section>
 
+<section id="grayBack">
+    <?php get_template_part( 'templates-parts/line-separator');?>
+    <?php get_template_part( 'templates-parts/section-nosproduits');?>
+    <?php get_template_part( 'templates-parts/line-separator');?>
+</section>
 
 
 
