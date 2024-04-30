@@ -12,11 +12,14 @@
         display: block!important;
         color: $primary-color;
         animation : pulse ease-in 3000ms infinite;
+
+
     }
 
-    .hotspot:first-of-type{
+    .unsupported-screen + .hotspot {
         color: black;
     }
+      
 
     .item{
         display: none !important;
