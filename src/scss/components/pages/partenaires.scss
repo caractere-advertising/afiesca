@@ -12,10 +12,10 @@
         display: block!important;
         color: $primary-color;
         animation : pulse ease-in 3000ms infinite;
+    }
 
-        &:first-child{
-            color: black;
-        }
+    .hotspot[data-index=1]{
+        color: yellow;
     }
 
     .item{
