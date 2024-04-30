@@ -59,7 +59,7 @@
         display: none;
 
         &:first-child{
-            display: block;
+            display: block !important;
         }
     }
 }
