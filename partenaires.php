@@ -149,6 +149,9 @@ get_template_part( 'templates-parts/header-nav');?>
     // Définition de la fonction pour activer la carte
     function activeCard() {
         var index = $(this).index();
+
+        $(".hotspot").css('color','#b52b43')
+        $(this).css('color','black');
         
         $('.result .card').hide();
         $('.result .card[data-index="' + index + '"]').show();

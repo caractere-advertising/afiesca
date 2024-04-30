@@ -11,7 +11,11 @@
     .hotspot{
         display: block!important;
         color: $primary-color;
-        animation : pulse ease-in 300ms infinite;
+        animation : pulse ease-in 3000ms infinite;
+
+        &:first-child{
+            color: black;
+        }
     }
 
     .item{
@@ -47,6 +51,10 @@
 
     .card{
         display: none;
+
+        &:first-child{
+            display: block;
+        }
     }
 }
 
