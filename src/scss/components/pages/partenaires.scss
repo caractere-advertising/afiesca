@@ -47,6 +47,12 @@
             font-size: .9rem;
             font-weight: 600;
         }
+
+        .cta-border{
+            &:hover{
+                color:$light;
+            }
+        }
     }
 
     .card{
