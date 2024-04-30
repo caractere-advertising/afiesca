@@ -14,7 +14,7 @@
         animation : pulse ease-in 3000ms infinite;
     }
 
-    .unsupported-screen + .hotspot[data-index=1]{
+    .unsupported-screen + .hotspot{
         color: yellow;
     }
 
