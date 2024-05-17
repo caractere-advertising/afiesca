@@ -1,10 +1,18 @@
 <div class="header navigation">
     <div class="col-g">
-        <a href="<?php echo home_url();?>">
-            <?php $logo = get_field('logo-entreprise','options');?>
-            <?php if($logo):?>
-                <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['title'];?>" class="logo" />
-            <?php endif;?>
+        <a href="<?php echo home_url();?>" class="logo" >
+            <?php 
+            
+            $logo = get_field('logo-entreprise','options');
+            $logoBlack = get_field('logo-negatif','options');
+
+            if($logo || $logoBlack):
+                if(is_front_page(  )):?>
+                    <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['title'];?>" />
+                <?php else :?>
+                    <img src="<?php echo $logoBlack['url'];?>" alt="<?php echo $logoBlack['title'];?>"/>
+                <?php endif;
+            endif;?>
         </a>
     </div>
     <div class="col-d">

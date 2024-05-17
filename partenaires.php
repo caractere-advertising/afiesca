@@ -88,7 +88,8 @@ get_template_part( 'templates-parts/header-nav');?>
             <?php endif;?>
 
         <div class="result" id="result-account-manager">
-            <h1 class="subtitle red upp bold">Votre account manager</h1>
+            <?php $subtitle = get_field('surtitre');?>
+            <h1 class="subtitle red upp bold"><?php if($subtitle): echo $subtitle; endif;?></h1>
             
             <?php if (have_rows('provinces')) : ?>
                 <?php $i = 1;?>
