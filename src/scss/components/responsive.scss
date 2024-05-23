@@ -706,29 +706,48 @@
     }
   }
 
-  
-
   #result-account-manager{
+    padding-bottom: 100px;
+
     h2{
       font-size: 2rem;
       line-height: 2.5rem;
     }
 
-    .am-content{
-      padding-left: 0;
-      margin: 40px auto;
-
-      .red {
-        letter-spacing: 1px !important;
-        font-size: 0.8rem;
-      }
-    }
-
     .description{
       padding: 0;
     }
+    
+    .card{
+        display: none;
+
+        .columns{
+          margin: 60px auto;
+          flex-direction: column;
+
+          .thumbnails{
+              width: 100%;
+              height: 360px;
+          }
+
+          .details_am{
+              width: 100%;
+
+              .am-content{
+                padding-left: 0;
+                margin: 40px auto;
+          
+                .red {
+                  letter-spacing: 1px !important;
+                  font-size: 0.8rem;
+                }
+              }  
+          }
+        }
+    }
   }
 }
+
 
 // Retina Screen
 
