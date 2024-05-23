@@ -95,32 +95,33 @@ get_template_part( 'templates-parts/header-nav');?>
             <?php if (have_rows('provinces')) : ?>
                 <?php $i = 1;?>
                 <?php while (have_rows('provinces')) : the_row(); ?>
-                    <div class="card columns" data-index="<?php echo $i;?>">
-                        <div class="thumbnails">
-                            <?php $img = get_sub_field('photo-am');
-                            if($img):?>
-                                <img src="<?php echo $img['url'];?>" alt="<?php echo $img['title'];?>"/>
-                            <?php endif;?>
-                        </div>
-
-                        <div class="details_am">
-                            <?php 
-                                $name = get_sub_field('nom');
-                                $informations = get_sub_field('informations');
-                                $cta = get_sub_field('email');
+                    <div class="card" data-index="<?php echo $i;?>">
+                        <?php 
+                            $name = get_sub_field('nom');
+                            $informations = get_sub_field('informations');
+                            $cta = get_sub_field('email');
                                 
-                                if ($name):
-                                    echo $name;
-                                endif;
-                            ?>
-
-                            <div class="am-content">
-                                <?php if ($informations) : ?>
-                                    <div class="red upp bold"><?php echo $informations; ?></div>
-                                <?php endif; ?>
-                                <?php if($cta):?>
-                                    <a href="mailto:<?php echo $cta;?>" class="cta cta-border round">Contact par email</a>
+                            if ($name):
+                                echo $name;
+                            endif;
+                        ?>
+                        <div class="columns">
+                            <div class="thumbnails">
+                                <?php $img = get_sub_field('photo-am');
+                                if($img):?>
+                                    <img src="<?php echo $img['url'];?>" alt="<?php echo $img['title'];?>"/>
                                 <?php endif;?>
+                            </div>
+
+                            <div class="details_am">
+                                <div class="am-content">
+                                    <?php if ($informations) : ?>
+                                        <div class="red upp bold"><?php echo $informations; ?></div>
+                                    <?php endif; ?>
+                                    <?php if($cta):?>
+                                        <a href="mailto:<?php echo $cta;?>" class="cta cta-border round">Contact par email</a>
+                                    <?php endif;?>
+                                </div>
                             </div>
                         </div>
                     </div>
