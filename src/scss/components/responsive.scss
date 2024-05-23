@@ -716,13 +716,14 @@
 
     .description{
       padding: 0;
+      margin: 0;
     }
     
     .card{
         display: none;
 
         .columns{
-          margin: 60px auto;
+          margin: 60px auto 0;
           flex-direction: column;
 
           .thumbnails{
