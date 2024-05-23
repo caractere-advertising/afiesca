@@ -97,7 +97,7 @@ get_template_part( 'templates-parts/header-nav');?>
                 <?php while (have_rows('provinces')) : the_row(); ?>
                     <div class="card columns" data-index="<?php echo $i;?>">
                         <div class="thumbnails">
-                            <?php $img = get_field('photo-am');
+                            <?php $img = get_sub_field('photo-am');
                             if($img):?>
                                 <img src="<?php echo $img['url'];?>" alt="<?php echo $img['title'];?>"/>
                             <?php endif;?>
@@ -129,9 +129,9 @@ get_template_part( 'templates-parts/header-nav');?>
                 <?php endwhile; ?>
             <?php endif; ?>
 
-            <div class="description">
-                <?php if($description): echo $description;endif;?>
-            </div>
+                <div class="description">
+                    <?php if($description): echo $description;endif;?>
+                </div>
         </div>
     </div>
 </section>
