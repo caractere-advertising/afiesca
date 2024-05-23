@@ -39,25 +39,41 @@
     }
 
     .description{
-        padding-left: 25%;
+        padding-left: calc(25% + 50px);
+        margin-top: -295px;
+        margin-bottom: 120px;
     }
-    .am-content{
-        padding-left: 25%;
-        margin: 60px auto;        
 
-        p,a{
-            color:$primary-color;
-            font-size: .9rem;
-            font-weight: 600;
-        }
+    .card{
+        .columns{
+            margin: 60px auto;
 
-        .cta-border{
-            &:hover{
-                color:$light;
+            .thumbnails{
+                width: 25%;
+                height: 360px;
+            }
+
+            .details_am{
+                width: 75%;
+
+                .am-content{  
+
+                    p,a{
+                        color:$primary-color;
+                        font-size: .9rem;
+                        font-weight: 600;
+                    }
+            
+                    .cta-border{
+                        &:hover{
+                            color:$light;
+                        }
+                    }
+                }
             }
         }
     }
-
+    
     .card{
         display: none;
     }
