@@ -21,7 +21,11 @@
                 <h4><?php if($titreCol): echo $titreCol; endif;?></h4>
                 <ul>
                     <?php foreach($links as $link):?>
-                        <li><a href="<?php echo $link->guid;?>"><?php echo $link->post_title;?></a></li>
+                        <?php 
+                            $id = $link->ID;
+                            $permalink = get_permalink( $id);
+                        ?>
+                        <li><a href="<?php echo $permalink;?>"><?php echo $link->post_title;?></a></li>
                     <?php endforeach;?>
                 </ul>
             </div>
