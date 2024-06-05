@@ -71,7 +71,7 @@ if ($clients) {
 }
 
 get_template_part( 'templates-parts/header-nav');?>
-<header id="header" style="background:url('<?php echo $bg_url;?>');"></header>
+<header id="header" style="background:url('<?php echo $bg_url;?>');background-position:center;"></header>
 
 
 <section id="interactivMap">

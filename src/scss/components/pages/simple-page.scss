@@ -133,6 +133,21 @@
           color: $light !important;
           text-decoration: none;
         }
+
+        form{
+          ul{
+            border: none;
+            
+            li{
+              input{
+                color:#fff;
+                &::placeholder{
+                  color:#fff;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
