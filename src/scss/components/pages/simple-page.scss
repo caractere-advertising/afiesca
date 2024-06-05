@@ -140,9 +140,10 @@
             
             li{
               input{
-                color:#fff;
+                color: $light;
+                
                 &::placeholder{
-                  color:#fff;
+                  color: $light;
                 }
               }
             }
