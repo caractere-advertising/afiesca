@@ -42,6 +42,7 @@
           text-transform: uppercase;
           font-family: "Sofia";
           letter-spacing: 10px;
+          text-align: left;
           font-weight: 300;
           font-size: 0.7rem;
 
@@ -81,6 +82,7 @@
 
       li {
         text-transform: uppercase;
+        text-align: left;
         letter-spacing: 3px;
         font-size: 0.9rem;
         padding-top: 10px;
@@ -136,6 +138,7 @@
               max-height: auto;
               padding: 0;
               margin: 0;
+              text-align: left;
 
               a {
                 color: $secondary-color;
@@ -143,6 +146,7 @@
                 letter-spacing: 0;
                 width: 90%;
                 display: block;
+                text-align: left;
                 padding: 2% 5%;
                 margin: 0;
               }
