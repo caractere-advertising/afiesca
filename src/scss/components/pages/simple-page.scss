@@ -139,7 +139,10 @@
             border: none;
             
             li{
-              input{
+              input, 
+              select, 
+              option,
+              textarea{
                 color: $light;
                 
                 &::placeholder{
