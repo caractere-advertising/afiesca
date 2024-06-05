@@ -7,11 +7,12 @@
             $logoBlack = get_field('logo-negatif','options');
 
             if($logo || $logoBlack):?>
-                <!-- if(is_front_page(  ) || is_page_template( 'contact.php' )):?>
-                   <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['title'];?>" />
+                <?php 
+                /* if(is_front_page(  ) || is_page_template( 'contact.php' )):
+                       <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['title'];?>" />
                     <?php else :?>
-                   <img src="<?php echo $logoBlack['url'];?>" alt="<?php echo $logoBlack['title'];?>"/>
-                <?php endif;?>-->
+                    <img src="<?php echo $logoBlack['url'];?>" alt="<?php echo $logoBlack['title'];?>"/>
+                    <?php endif;*/?>
 
                 <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['title'];?>" /><?php
             endif;?>
