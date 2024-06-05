@@ -7,7 +7,7 @@
             $logoBlack = get_field('logo-negatif','options');
 
             if($logo || $logoBlack):
-                if(is_front_page(  ) || is_page('contact')):?>
+                if(is_front_page(  ) || is_page(394)):?>
                     <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['title'];?>" />
                 <?php else :?>
                     <img src="<?php echo $logoBlack['url'];?>" alt="<?php echo $logoBlack['title'];?>"/>
