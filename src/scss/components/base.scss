@@ -251,4 +251,16 @@ form {
       padding: 5px 25px;
     }
   }
+
+  .wpcf7-acceptance{
+    input{
+      height: inherit;
+      min-height: inherit;
+      min-width: inherit;
+    }
+
+    .wpcf7-list-item-label{
+      color : $light;
+    }
+  }
 }
