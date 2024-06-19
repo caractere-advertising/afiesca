@@ -254,9 +254,8 @@ form {
 
   .wpcf7-acceptance{
     input{
-      height: inherit;
-      min-height: inherit;
-      min-width: inherit;
+      height: 0;
+      width: fit-content;
     }
 
     .wpcf7-list-item-label{
