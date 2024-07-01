@@ -21,7 +21,7 @@
     <div class="col-d">
         <div class="secondary-navigation">
             <div id="searchBarDiv">
-                <input type="text" id="searchbar" style="border:none;border-bottom:1px solid #eee; color:#fff; background: none; outline:none;" placeholder="Rechercher..."/>
+                <input type="text" id="searchbar" style="border:none;border-bottom:1px solid #eee; color:#fff; background: none; outline:none;" <?php echo  get_bloginfo("language") == 'fr-FR' ? "placeholder=\"Rechercher...\"" : "placeholder=\"Zoeken...\"";?> />
                 <div id="displayResult"></div>
             </div>
             <?php wp_nav_menu(array(
