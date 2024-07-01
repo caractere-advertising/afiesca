@@ -58,6 +58,14 @@
           font-weight: 600;
         }
 
+        form{
+          .wpcf7-acceptance{
+            .wpcf7-list-item-label{
+              color: $secondary-color;
+            }
+          }
+        }
+
         .intro,
         .par_cta {
           ul {
