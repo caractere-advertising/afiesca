@@ -60,8 +60,12 @@
 
         form{
           .wpcf7-acceptance{
-            .wpcf7-list-item-label{
-              color: $secondary-color;
+            .wpcf7-list-item{
+              margin-left: 0;
+              
+              .wpcf7-list-item-label{
+                color: $secondary-color;
+              }
             }
           }
         }
