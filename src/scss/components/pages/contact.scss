@@ -47,7 +47,7 @@
                 border-bottom: 1px solid $light;
                 min-height: 50px;
                 background: none;
-                color: $middle-gray;
+                color: unset;
 
                 &:focus {
                   outline: 0;
