@@ -172,14 +172,12 @@
             }
           }
 
-          form{
-            .wpcf7-acceptance{
-              .wpcf7-list-item{
-                margin-left: 0;
+          .wpcf7-acceptance{
+            .wpcf7-list-item{
+              margin-left: 0;
                 
-                .wpcf7-list-item-label{
-                  color: $light;
-                }
+              .wpcf7-list-item-label{
+                color: $light;
               }
             }
           }
