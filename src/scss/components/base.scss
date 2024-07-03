@@ -35,6 +35,10 @@ header {
   box-sizing: border-box;
 }
 
+input[type="file"]{
+  display: none;
+}
+
 .uploadfile{
   padding: 3px 20px;
   font-size: .7rem;
