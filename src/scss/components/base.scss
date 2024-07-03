@@ -40,13 +40,17 @@ input[type="file"]{
 }
 
 .uploadfile{
-  padding: 3px 20px;
+  padding: 6px 25px;
   font-size: .7rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   background: $primary-color;
   color: $light;
   border-radius: 20px;
+}
+
+.uploadfile:hover{
+  background-color: $hover;
 }
 
 img,
