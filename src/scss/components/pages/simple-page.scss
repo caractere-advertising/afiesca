@@ -155,7 +155,7 @@
               select, 
               option,
               textarea{
-                color: unset;
+                color: $light;
                 
                 &::placeholder{
                   color: $light;
