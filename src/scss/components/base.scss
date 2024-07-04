@@ -35,6 +35,15 @@ header {
   box-sizing: border-box;
 }
 
+input{
+  &:focus,
+  &:active,
+  &:focus-visible{
+    outline: 0;
+    border-bottom: 1px solid $primary-color;
+  }
+}
+
 input[type="file"]{
   display: none;
 }
