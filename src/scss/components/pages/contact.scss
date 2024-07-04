@@ -80,6 +80,14 @@
                   filter: brightness(0.8);
                 }
               }
+
+              select{
+                color: $light;
+
+                &:focus{
+                  color:$secondary-color;
+                }
+              }
             }
 
             .liSubmit p {
