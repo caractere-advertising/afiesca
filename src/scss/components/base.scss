@@ -39,6 +39,14 @@ input[type="file"]{
   display: none;
 }
 
+select{
+  color: $light;
+
+  &:focus{
+    color:$secondary-color;
+  }
+}
+
 .uploadfile{
   padding: 6px 25px;
   font-size: .7rem;

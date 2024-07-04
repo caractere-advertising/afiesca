@@ -129,6 +129,14 @@
           color: $light !important;
           text-decoration: none;
         }
+
+        select{
+          color: $light;
+
+          &:focus{
+            color:$secondary-color;
+          }
+        }
       }
     }
   }
