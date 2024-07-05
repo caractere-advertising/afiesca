@@ -232,6 +232,19 @@ a {
   }
 }
 
+
+form{
+  .disclaimer{
+    color: $light;
+    font-family: 'montserrat', sans-serif;
+    font-size: .75rem;
+    font-style: italic;
+    margin-top: -30px;
+    display: block;
+    margin-left: 15px;
+  }
+}
+
 /* Formulaire */
 
 form {
