@@ -510,12 +510,16 @@
 
   .wpcf7-acceptance{
     .wpcf7-list-item  {
-      margin:0;
+      margin-left: 14px;
       color: $secondary-color;
     }
 
     .wpcf7-list-item-label{
       color: $secondary-color;
+
+      a{
+        color:$secondary-color;
+      }
     }
   }
 }
