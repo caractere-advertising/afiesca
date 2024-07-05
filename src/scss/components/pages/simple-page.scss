@@ -151,8 +151,7 @@
             border: none;
             
             li{
-              input, 
-              select, 
+              input,  
               option,
               textarea{
                 color: $light;
@@ -168,14 +167,6 @@
                 width: 15px;
                 margin-right: 20px;
                 margin-top: 5px;
-              }
-
-              select{
-                color: $light;
-
-                &:focus{
-                  color:$secondary-color;
-                }
               }
             }
           }

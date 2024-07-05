@@ -50,9 +50,9 @@ input[type="file"]{
 }
 
 select{
-  color: $light;
-
-  &:focus{
+  &:focus,
+  &:active,
+  &:focus-visible{
     color:$secondary-color;
   }
 }
