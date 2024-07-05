@@ -49,13 +49,6 @@ input[type="file"]{
   display: none;
 }
 
-select{
-  &:focus,
-  &:active,
-  &:focus-visible{
-    color:$secondary-color;
-  }
-}
 
 .uploadfile{
   padding: 6px 25px;
