@@ -497,4 +497,14 @@
 
 #contact {
   background-color: $light-gray !important;
+
+  .disclaimer{
+    color: $secondary-color;
+  }
+
+  .acceptance{
+    input{
+      margin:0;
+    }
+  }
 }
