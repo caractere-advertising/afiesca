@@ -499,12 +499,18 @@
   background-color: $light-gray !important;
 
   .disclaimer{
+    text-align: left;
     color: $secondary-color;
+
+    strong{
+      color:$secondary-color;
+    }
   }
 
-  .acceptance{
+  .wpcf7-acceptance{
     input{
       margin:0;
+      color: $secondary-color;
     }
   }
 }
