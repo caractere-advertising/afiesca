@@ -501,14 +501,15 @@
   .disclaimer{
     text-align: left;
     color: $secondary-color;
+    margin-bottom: 30px;
 
-    strong{
+    a{
       color:$secondary-color;
     }
   }
 
   .wpcf7-acceptance{
-    input{
+    .wpcf7-list-item  {
       margin:0;
       color: $secondary-color;
     }
