@@ -63,8 +63,8 @@
                 }
               }
 
-              select{
-                color:inherit;
+              select:focus{
+                color: $secondary-color;
               }
 
               input[type="radio"] {
