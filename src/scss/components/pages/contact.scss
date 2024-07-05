@@ -63,6 +63,10 @@
                 }
               }
 
+              select{
+                color:inherit;
+              }
+
               input[type="radio"] {
                 min-height: 10px;
               }
