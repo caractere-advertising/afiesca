@@ -280,6 +280,11 @@ form {
         min-height: 50px;
         background: none;
         outline: none;
+        color: $light;
+      }
+
+      select:focus{
+        color: $secondary-color;
       }
 
       input[type="radio"] {
