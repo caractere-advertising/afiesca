@@ -34,7 +34,9 @@
             endif;?>
         </div>
 
-        <?php $clink = get_field('cta_conf','options');$blue = get_field('fond_bleu');?>
+        <?php 
+        $clink = get_field('cta_conf','options');
+        $blue = get_field('fond_bleu');?>
         <?php if($clink):?>
             <span class="cta-item<?php echo $blue == true ? '' : '-blue';?>">
                 <a href="<?php echo $clink['url'];?>" class="cta"><?php echo $clink['title'];?></a>
