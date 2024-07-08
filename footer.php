@@ -64,15 +64,15 @@
         ?>
 
         <div class="container desktop">
-            <a href="<?php echo $cookies['url'];?>"><?php echo $cookies['name'];?></a>
+            <a href="<?php echo $cookies['url'];?>"><?php echo $cookies['title'];?></a>
             <div><?php echo get_field('copyright','options');?></div>
-            <a href="<?php echo $conf['url'];?>"><?php echo $conf['name'];?></a>
+            <a href="<?php echo $conf['url'];?>"><?php echo $conf['title'];?></a>
         </div>
 
         <div class="container mobile">
             <div class="links">
-                <a href="<?php echo $cookies['url'];?>"><?php echo $cookies['name'];?></a>
-                <a href="<?php echo $conf['url'];?>"><?php echo $conf['name'];?></a>
+                <a href="<?php echo $cookies['url'];?>"><?php echo $cookies['title'];?></a>
+                <a href="<?php echo $conf['url'];?>"><?php echo $conf['title'];?></a>
             </div>
 
             <div class="copyright">
