@@ -1,13 +1,13 @@
 <section id="confiance">
     <div class="container">
 
-        <?php if(is_front_page(  )):
+        <?php if(is_front_page( )):
             $titre_conf  = get_field('titre_conf','options');
-            $intro_conf = get_field('introduction_conf','options');  
+            $intro_conf  = get_field('introduction_conf','options');  
         ?>
             <span class="from-bottom"><?php if($titre_conf): echo $titre_conf;endif; ?></span>
             <span class="from-bottom"><?php if($intro_conf): echo $intro_conf;endif; ?></span>
-        <?endif;?>
+        <?php endif;?>
 
         <div class="table_qualite">
             <?php 
