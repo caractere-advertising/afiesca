@@ -58,18 +58,21 @@
 
     </div>
     <div class="footer_bottom">
+        <?php
+            $cookies = get_field('cookies','options');
+            $conf = get_field('confidentialite','options');
+        ?>
+
         <div class="container desktop">
-            <a href="">Cookies</a>
-            <div>
-                <?php echo get_field('copyright','options');?>
-            </div>
-            <a href="">Confidentialité</a>
+            <a href="<?php echo $cookies['url'];?>"><?php echo $cookies['name'];?></a>
+            <div><?php echo get_field('copyright','options');?></div>
+            <a href="<?php echo $conf['url'];?>"><?php echo $conf['name'];?></a>
         </div>
 
         <div class="container mobile">
             <div class="links">
-                <a href="">Cookies</a>
-                <a href="">Confidentialité</a>
+                <a href="<?php echo $cookies['url'];?>"><?php echo $cookies['name'];?></a>
+                <a href="<?php echo $conf['url'];?>"><?php echo $conf['name'];?></a>
             </div>
 
             <div class="copyright">
