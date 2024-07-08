@@ -121,7 +121,6 @@
 </section>
 
 <?php get_template_part('templates-parts/section-cta-contact');?>
-
 <?php get_template_part('templates-parts/disclaimer-banner');?>
 
 <section id="actualites">
