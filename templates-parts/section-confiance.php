@@ -20,17 +20,15 @@
                     $link = get_sub_field('link_confiance');?>
 
                     <a href="<?php echo $link['url'];?>"  class="card_qualite from-bottom">
-                        <div>
-                            <?php if($img):?>
-                                <img src="<?php echo $img['url'];?>" alt="<?php echo $img['name'];?>" />
-                            <?php endif;?>
-                            <?php if($title):?>
-                                <h4><?php echo $title;?></h4>
-                            <?php endif;?>
-                            <?php if($texte):?> 
-                                <p><?php echo $texte;?></p>
-                            <?php endif;?>
-                        </div>
+                        <?php if($img):?>
+                            <img src="<?php echo $img['url'];?>" alt="<?php echo $img['name'];?>" />
+                        <?php endif;?>
+                        <?php if($title):?>
+                            <h4><?php echo $title;?></h4>
+                        <?php endif;?>
+                        <?php if($texte):?> 
+                            <p><?php echo $texte;?></p>
+                        <?php endif;?>
                     </a>
             <?php endwhile;
             endif;?>
