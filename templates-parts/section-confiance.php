@@ -12,24 +12,26 @@
         <div class="table_qualite">
             <?php 
             if(have_rows('qualites','options')) :
-                while(have_rows('qualites','options')): the_row();?>
-                    <div class="card_qualite from-bottom">
-                        <?php 
-                            $img = get_sub_field('icone');
-                            $title = get_sub_field('titre');
-                            $texte = get_sub_field('description');
-                        ?>
+                while(have_rows('qualites','options')): the_row();
 
-                        <?php if($img):?>
-                            <img src="<?php echo $img['url'];?>" alt="<?php echo $img['name'];?>" />
-                        <?php endif;?>
-                        <?php if($title):?>
-                            <h4><?php echo $title;?></h4>
-                        <?php endif;?>
-                        <?php if($texte):?>
-                            <p><?php echo $texte;?></p>
-                        <?php endif;?>
-                    </div>
+                    $img = get_sub_field('icone');
+                    $title = get_sub_field('titre');
+                    $texte = get_sub_field('description');
+                    $link = get_sub_field('link');?>
+
+                    <a href="<?php echo $link['url'];?>">
+                        <div class="card_qualite from-bottom">
+                            <?php if($img):?>
+                                <img src="<?php echo $img['url'];?>" alt="<?php echo $img['name'];?>" />
+                            <?php endif;?>
+                            <?php if($title):?>
+                                <h4><?php echo $title;?></h4>
+                            <?php endif;?>
+                            <?php if($texte):?> 
+                                <p><?php echo $texte;?></p>
+                            <?php endif;?>
+                        </div>
+                    </a>
             <?php endwhile;
             endif;?>
         </div>
