@@ -17,10 +17,10 @@
                     $img = get_sub_field('icone');
                     $title = get_sub_field('titre');
                     $texte = get_sub_field('description');
-                    $link = get_sub_field('link');?>
+                    $link = get_sub_field('link_confiance');?>
 
-                    <a href="<?php echo $link['url'];?>">
-                        <div class="card_qualite from-bottom">
+                    <a href="<?php echo $link['url'];?>"  class="card_qualite from-bottom">
+                        <div>
                             <?php if($img):?>
                                 <img src="<?php echo $img['url'];?>" alt="<?php echo $img['name'];?>" />
                             <?php endif;?>
