@@ -49,7 +49,9 @@ get_template_part( 'templates-parts/header-nav');?>
                         <?php 
                             foreach($galerie as $g):
                                 echo '<div class="swiper-slide">
-                                        <img src="'.$g['url'].'" alt="'.$g['name'].'"/>
+                                        <a data-fslightbox href="'.$g['url'].'">
+                                            <img src="'.$g['url'].'" alt="'.$g['name'].'"/>
+                                        </a>
                                     </div>';
                             endforeach;
                         ?>
