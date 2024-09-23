@@ -96,7 +96,10 @@
       .swiper-article{
         .swiper-wrapper{
           .swiper-slide{
-            max-height: 500px;
+            max-height: 555px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             img{
               height: 100%;
