@@ -210,24 +210,26 @@
 
   .single{
     #simple-page{
-      .swiper-article{
-        .swiper-wrapper{
-          .swiper-slide{
-            max-height: 185px;
+      .container{
+        .swiper-article{
+          .swiper-wrapper{
+            .swiper-slide{
+              max-height: 185px;
+            }
           }
-        }
-    
-        .swiper-button-next,
-        .swiper-button-prev{
-          height: 30px;
-    
-          &::after{
-            font-size: 1rem;
+      
+          .swiper-button-next,
+          .swiper-button-prev{
+            height: 30px;
+      
+            &::after{
+              font-size: 1rem;
+            }
           }
-        }
-    
-        .swiper-button-prev{
-          right: 30px;
+      
+          .swiper-button-prev{
+            right: 30px;
+          }
         }
       }
     }
