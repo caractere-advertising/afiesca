@@ -212,9 +212,15 @@
     #simple-page{
       .container{
         .swiper-article{
+          max-height: 185px;
           .swiper-wrapper{
+            max-height: 185px;
             .swiper-slide{
               max-height: 185px;
+
+              a{
+                max-height: 185px;
+              }
             }
           }
       
