@@ -53,11 +53,9 @@ get_template_part( 'templates-parts/header-nav');?>
                                     </div>';
                             endforeach;
                         ?>
-
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
                     </div>
-                </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             <?php endif;?>
         </div>
