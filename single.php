@@ -11,6 +11,8 @@ $textCta = get_field('texte_cta');
 $cta = get_field('cta');
 $outro = get_field('outro');
 
+$galerie = get_field('galerie');
+
 $bg_header = get_field('bg_header');
 
 if(!$bg_header):
@@ -40,30 +42,48 @@ get_template_part( 'templates-parts/header-nav');?>
                 <?php if($cta) : echo '<a href="'.$cta['url'].'" class="cta cta-blue bgBlue">'. $cta['title'] .'</a>';endif;?>
             </div>
             <?php endif;?>
+
+            <?php if($galerie):?>
+                <div class="swiper swiper-article">
+                    <div class="swiper-wrapper">
+                        <?php 
+                            foreach($galerie as $g):
+                                echo '<div class="swiper-slide">
+                                        <img src="'.$g['url'].'" alt="'.$g['name'].'"/>
+                                    </div>';
+                            endforeach;
+                        ?>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+                </div>
+            <?php endif;?>
         </div>
     </div>
 </section>
 
 <?php if($section_bleue):?>
-<section id="section_bleue">
-    <div class="container">
-        <div class="colg"></div>
-        <div class="cold from-right">
-            <?php echo $section_bleue;?>
+    <section id="section_bleue">
+        <div class="container">
+            <div class="colg"></div>
+            <div class="cold from-right">
+                <?php echo $section_bleue;?>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 <?php endif;?>
 
 <?php if($outro):?>
-<section id="outro">
-    <div class="container">
-        <div class="colg"></div>
-        <div class="cold">
-            <div class="outro from-right"><?php echo $outro;?></div>
+    <section id="outro">
+        <div class="container">
+            <div class="colg"></div>
+            <div class="cold">
+                <div class="outro from-right"><?php echo $outro;?></div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 <?php endif;?>
 
 <?php 
