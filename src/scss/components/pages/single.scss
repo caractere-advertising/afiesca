@@ -94,17 +94,22 @@
       }
 
       .swiper-article{
+        height: 555px;
+
         .swiper-wrapper{
+          height: 555px;
+
           .swiper-slide{
             max-height: 555px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
 
-            img{
-              height: 100%;
-              width: 100%;
-              object-fit: cover;
+            a{
+              height: 555px;
+
+              img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+              }
             }
           }
         }
