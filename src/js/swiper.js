@@ -32,3 +32,9 @@ const swiperRespNos = new Swiper(".swiper-nos", {
   slidesPerView: 1.3,
   spaceBetween: 30,
 });
+
+const swiperArticle = new Swiper(".swiper-article", {
+  loop: true,
+  autoplay: false,
+  cssMode: true
+})
