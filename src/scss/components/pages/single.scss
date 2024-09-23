@@ -92,6 +92,31 @@
           display: inline-block;
         }
       }
+
+      .swiper-article{
+        .swiper-wrapper{
+          .swiper-button-next,
+          .swiper-button-prev{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+          }
+
+          .swiper-button-next{
+            background-color: $primary-color;
+            height: 40px;
+            width: 40px;
+            color: $light;
+          }
+
+          .swiper-button-prev{
+            background-color: $light;
+            color: $primary-color;
+            right: 40px;
+          }
+        }
+      }
     }
   }
 

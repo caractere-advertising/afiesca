@@ -36,5 +36,9 @@ const swiperRespNos = new Swiper(".swiper-nos", {
 const swiperArticle = new Swiper(".swiper-article", {
   loop: true,
   autoplay: false,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
   cssMode: true
 })
