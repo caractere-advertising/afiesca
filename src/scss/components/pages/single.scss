@@ -104,13 +104,16 @@
               object-fit: cover;
             }
           }
+        }
 
-          .swiper-button-next,
+        .swiper-button-next,
           .swiper-button-prev{
             position: absolute;
             right: 0;
+            left: auto;
             bottom: 0;
             text-align: center;
+            font-size: 2rem;
           }
 
           .swiper-button-next{
@@ -125,7 +128,6 @@
             color: $primary-color;
             right: 40px;
           }
-        }
       }
     }
   }
