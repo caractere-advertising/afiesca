@@ -141,6 +141,22 @@
           right: 50px;
         }
       }
+
+      .swiper-thumbs-article{
+        margin-top: 20px;
+
+        .swiper-wrapper{
+          .swiper-slide{
+            max-height: 150px;
+
+            img{
+              height: 100%;
+              width: 100%;
+              object-fit: contain;
+            }
+          }
+        }
+      }
     }
   }
 
