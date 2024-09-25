@@ -148,11 +148,20 @@
         .swiper-wrapper{
           .swiper-slide{
             max-height: 150px;
+            overflow: hidden;
 
             img{
               height: 100%;
               width: 100%;
               object-fit: contain;
+              transform: scale(1);
+              transition: all ease-in 300ms;
+            }
+
+            &:hover{
+              img{
+                transform: scale(1.1);
+              }
             }
           }
         }

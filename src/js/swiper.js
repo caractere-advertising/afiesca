@@ -39,6 +39,7 @@ const swiperThumbsArticle = new Swiper(".swiper-thumbs-article", {
   slidesPerView: 4,
   freeMode: true,
   watchSlidesProgress: true,
+  snapG
 });
 
 const swiperArticle = new Swiper(".swiper-article", {
