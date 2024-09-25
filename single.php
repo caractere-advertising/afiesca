@@ -62,15 +62,11 @@ get_template_part( 'templates-parts/header-nav');?>
 
                 <div class="swiper swiper-thumbs-article">
                     <div class="swiper-wrapper">
-                        <?php 
-                            foreach($galerie as $g):
-                                echo '<div class="swiper-slide">
-                                        <a data-fslightbox href="'.$g['url'].'">
-                                            <img src="'.$g['url'].'" alt="'.$g['name'].'"/>
-                                        </a>
-                                    </div>';
-                            endforeach;
-                        ?>
+                        <?php foreach($galerie as $g):
+                            echo '<div class="swiper-slide">
+                                    <img src="'.$g['url'].'" alt="'.$g['name'].'"/>
+                                </div>';
+                        endforeach; ?>
                     </div>
                 </div>
             <?php endif;?>
