@@ -40,5 +40,16 @@ const swiperArticle = new Swiper(".swiper-article", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  cssMode: true
+  cssMode: true,
+  thumbs: {
+    swiper: swiperThumbsArticle,
+  },
+})
+
+const swiperThumbsArticle = new Swiper(".swiper-thumbs-article", {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
 })

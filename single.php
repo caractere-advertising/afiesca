@@ -32,7 +32,7 @@ get_template_part( 'templates-parts/header-nav');?>
         <div class="colg">
             <div class="intro from-bottom">
                 <h2><?php if($subtitle) : echo $subtitle;endif;?></h2>
-                <?php if($titre) : echo $titre;endif;?>
+                    <?php if($titre) : echo $titre;endif;?>
             </div>
         </div>
         <div class="cold">
@@ -58,6 +58,20 @@ get_template_part( 'templates-parts/header-nav');?>
                     </div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
+                </div>
+
+                <div class="swiper swiper-thumbs-article">
+                    <div class="swiper-wrapper">
+                        <?php 
+                            foreach($galerie as $g):
+                                echo '<div class="swiper-slide">
+                                        <a data-fslightbox href="'.$g['url'].'">
+                                            <img src="'.$g['url'].'" alt="'.$g['name'].'"/>
+                                        </a>
+                                    </div>';
+                            endforeach;
+                        ?>
+                    </div>
                 </div>
             <?php endif;?>
         </div>
