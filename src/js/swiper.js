@@ -35,11 +35,24 @@ const swiperRespNos = new Swiper(".swiper-nos", {
 
 const swiperThumbsArticle = new Swiper(".swiper-thumbs-article", {
   loop: true,
-  spaceBetween: 10,
   slidesPerView: 4,
   freeMode: true,
   watchSlidesProgress: true,
-  snapG
+
+  breakpoints: {
+    640: {
+      slidesPerView: 1.2,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 10,
+    },
+  },
 });
 
 const swiperArticle = new Swiper(".swiper-article", {
