@@ -33,6 +33,14 @@ const swiperRespNos = new Swiper(".swiper-nos", {
   spaceBetween: 30,
 });
 
+const swiperThumbsArticle = new Swiper(".swiper-thumbs-article", {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+
 const swiperArticle = new Swiper(".swiper-article", {
   loop: true,
   autoplay: false,
@@ -46,10 +54,3 @@ const swiperArticle = new Swiper(".swiper-article", {
   },
 })
 
-const swiperThumbsArticle = new Swiper(".swiper-thumbs-article", {
-  loop: true,
-  spaceBetween: 10,
-  slidesPerView: 4,
-  freeMode: true,
-  watchSlidesProgress: true,
-})
