@@ -66,5 +66,4 @@ const swiperArticle = new Swiper(".swiper-article", {
   thumbs: {
     swiper: swiperThumbsArticle,
   },
-})
-
+});
