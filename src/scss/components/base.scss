@@ -384,7 +384,10 @@ form {
       }
 
       p{
-        text-align: left;
+        text-align: center;
+        color: $light;
+        line-height: 1.2rem;
+        margin: 20px 0;
       }
     }
   }
