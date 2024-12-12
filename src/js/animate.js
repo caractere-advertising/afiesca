@@ -72,6 +72,17 @@ $(document).ready(function () {
     });
   });
 
+  $(document).on("click", function (event) {
+    if ($(event.target).hasClass("close")) {
+      closePopup();
+    }
+  });
+
+  function closePopup() {
+    $(".container_popup").empty();
+    $("#modal-chambre").hide();
+  }
+
   var modal = document.getElementById('#modal_popup_front');
 
   // Fermeture de la popup lors du clic sur le bouton de fermeture
@@ -85,4 +96,11 @@ $(document).ready(function () {
       modal.css("display","none");
     }
   });
+
+  $(document).on('click', function(event) {
+    if (!$(event.target).closest('.content_popup').length ) {
+      console.log('close popup');
+      modal.css("display","none");
+    }
+});
 });
