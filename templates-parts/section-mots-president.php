@@ -1,4 +1,4 @@
-<section id="mot_president">
+    <section id="mot_president">
     <div class="container">
         <div class="columns">
             <div class="col-g">
