@@ -7,7 +7,7 @@ $("#searchbar").keyup(function (e) {
     $.ajax({
       type: "POST",
       datatype: "json",
-      url: "https://afi-esca.be/wp-admin/admin-ajax.php",
+      url: "https://afi-esca.be/wgk2bwa8hk9ogzt/admin-ajax.php",
       data: {
         action: "searchbar",
         q: value,
