@@ -50,37 +50,44 @@ function fix_svg() {
   function searchbar(){
     global $wpdb;
 
-    if($_POST):
+    if ($_POST) {
         $q = sanitize_text_field($_POST['q']);
-    endif;
-    $table = $wpdb->prefix.'posts';
+    }
+
+    $table = $wpdb->prefix . 'posts';
     $result = array();
 
-    if($q):
-        $req = $wpdb->get_results("SELECT * FROM $table WHERE `post_title` LIKE '%$q%' AND `post_status` = 'publish' AND `post_type` IN ('page','post')", ARRAY_A);
+    if ($q) {
+        $req = $wpdb->get_results(
+            $wpdb->prepare(
+                "SELECT ID, post_title, post_type FROM $table 
+                WHERE post_title LIKE %s 
+                AND post_status = 'publish' 
+                AND post_type IN ('page', 'post')",
+                "%{$q}%"
+            ), 
+            ARRAY_A
+        );
 
-        if($req):
+        if ($req) {
             foreach ($req as $post) {
-                // Récupérer l'URL en fonction du type de contenu
-                if ($post['post_type'] == 'page') {
-                    $permalink = get_page_link($post['ID']);
-                } else {
-                    $permalink = get_permalink($post['ID']);
-                }
+                $permalink = ($post['post_type'] == 'page') ? get_page_link($post['ID']) : get_permalink($post['ID']);
 
-                $post['permalink'] = $permalink;
-                $result[] = $post;
-
-
-                wp_send_json_success($result);
+                $result[] = array(
+                    'post_title' => $post['post_title'],
+                    'permalink'  => $permalink,
+                );
             }
-        else: 
-            $result = 'Aucun résultat';
-            wp_send_json_error($result);
-        endif;
-    endif;
+
+            // Envoi la réponse JSON avec tous les résultats
+            wp_send_json_success($result);
+        } else { 
+            wp_send_json_error('Aucun résultat');
+        }
+    }
 
     wp_die();
 }
+
 
   
