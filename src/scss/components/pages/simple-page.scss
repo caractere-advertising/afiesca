@@ -1,8 +1,16 @@
-.page-template-simple-page {
+.page-template-simple-page,
+.page-template-simple-jobs {
   #simple-page,
   #section_bleue,
   #outro {
     .container {
+      .content_service{
+        border: none;
+
+        .document_ddl{
+          padding: 50px 30px;
+        }
+      }
       .colg {
         position: relative;
         z-index: 10;

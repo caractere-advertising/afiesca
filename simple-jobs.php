@@ -1,15 +1,11 @@
 <?php 
-/* Template Name: simple-page */
+/* Template Name: simple-jobs */
 
 get_header();
 
 $subtitle = get_field('subtitle-sm');
 $titre = get_field('titre_page');
 $intro = get_field('introduction');
-$section_bleue = get_field('section_bleue');
-$textCta = get_field('texte_cta');
-$cta = get_field('cta');
-$outro = get_field('outro');
 
 $jobActif     = get_field('actif_listing');
 $titroffre    = get_field('titre_offre');
@@ -29,45 +25,48 @@ get_template_part( 'templates-parts/header-nav');?>
 <header id="header" style="background:url('<?php echo $bg_url;?>');">
 </header>
 
-<section id="simple-page">
+<?php if($jobActif):
+    if(current_user_can('administrator')):?>
+        <section id="simple-page">
+            <div class="container">
+                <div class="colg">
+                    <div class="intro from-bottom">
+                        <h2><?php if($subtitle) : echo $subtitle;endif;?></h2>
+                        <?php if($titroffre): echo $titroffre; endif;?>
+                    </div>
+                </div>
+                <div class="content_service">
+                    <?php if($listings):
+                        foreach($listings as $job):
+                            $permalink = get_permalink( $job->ID );
+                            $title = get_the_title( $job->ID );?>
+
+                            
+                            <a href="<?php echo $permalink;?>">
+                                <div class="document_ddl">
+                                    <?php echo '<p>'.$title.'</p>';?>Découvrir
+                                </div>
+                            </a>
+                        <?php endforeach; 
+                        wp_reset_postdata();
+                    endif;?>
+                </div>
+            </div>
+        </section>
+  <?php endif;
+endif;?>
+
+<section id="presa_jobs">
     <div class="container">
         <div class="colg">
             <div class="intro from-bottom">
-                <h2><?php if($subtitle) : echo $subtitle;endif;?></h2>
                 <?php if($titre) : echo $titre;endif;?>
             </div>
         </div>
-        <div class="cold">
+        <div class="content_service">
             <div class="intro from-bottom"><?php if($intro) : echo $intro;endif;?></div>
-    
-            <div class="par_cta">
-                <?php if($cta) : echo '<a href="'.$cta['url'].'" class="cta cta-blue">'. $cta['title'] .'</a>';endif;?>
-            </div>
-        </div>
     </div>
 </section>
-
-<?php if($section_bleue):?>
-<section id="section_bleue">
-    <div class="container">
-        <div class="colg"></div>
-        <div class="cold from-right">
-            <?php echo $section_bleue;?>
-        </div>
-    </div>
-</section>
-<?php endif;?>
-
-<?php if($outro):?>
-<section id="outro">
-    <div class="container">
-        <div class="colg"></div>
-        <div class="cold">
-            <div class="outro from-right"><?php echo $outro;?></div>
-        </div>
-    </div>
-</section>
-<?php endif;?>
 
 <?php 
 $title_vosp = get_field('titre-vosp');
