@@ -6,6 +6,7 @@ get_header();
 $subtitle = get_field('subtitle-sm');
 $titre = get_field('titre_page');
 $intro = get_field('introduction');
+$introJobs = get_field('introduction-jobs');
 
 $jobActif     = get_field('actif_listing');
 $titroffre    = get_field('titre_offre');
@@ -36,6 +37,7 @@ get_template_part( 'templates-parts/header-nav');?>
                     </div>
                 </div>
                 <div class="content_service">
+                    <?php if($introJobs): echo $introJobs;endif;?>
                     <?php if($listings):
                         foreach($listings as $job):
                             $permalink = get_permalink( $job->ID );
