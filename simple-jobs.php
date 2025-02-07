@@ -36,8 +36,11 @@ get_template_part( 'templates-parts/header-nav');?>
                         <?php if($titroffre): echo $titroffre; endif;?>
                     </div>
                 </div>
+                <div class="col-d">
+
+                <?php if($introJobs): echo $introJobs;endif;?>
+    </div>
                 <div class="content_service">
-                    <?php if($introJobs): echo $introJobs;endif;?>
                     <?php if($listings):
                         foreach($listings as $job):
                             $permalink = get_permalink( $job->ID );
