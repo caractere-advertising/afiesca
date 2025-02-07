@@ -114,6 +114,21 @@
     }
   }
 
+  #presa_jobs{
+    .container{
+      border-top: 1px solid $middle-gray;
+      padding-top: 50px;
+
+      .content_service{
+        border: none;
+
+        .document_ddl{
+          padding: 50px 30px;
+        }
+      }
+    }
+  }
+
   #section_bleue {
     background-color: $secondary-color;
 

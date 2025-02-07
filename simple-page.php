@@ -11,6 +11,10 @@ $textCta = get_field('texte_cta');
 $cta = get_field('cta');
 $outro = get_field('outro');
 
+$jobActif     = get_field('actif_listing');
+$titroffre    = get_field('titre_offre');
+$listings     = get_field('listing_offre');
+
 $bg_header = get_field('bg_header');
 
 if(!$bg_header):
@@ -42,6 +46,33 @@ get_template_part( 'templates-parts/header-nav');?>
         </div>
     </div>
 </section>
+
+<?php if($jobActif):
+    if(current_user_can('administrator')):?>
+        <section id="presa_jobs">
+            <div class="container entry-content">
+            <?php if($titroffre): echo $titroffre; endif;?>
+
+                <div class="content_service">
+                    <?php if($listings):
+                        foreach($listings as $job):
+                            $permalink = get_permalink( $job->ID );
+                            $title = get_the_title( $job->ID );?>
+
+                            
+                            <a href="<?php echo $permalink;?>">
+                                <div class="document_ddl">
+                                    <?php echo '<p>'.$title.'</p>';?>Découvrir
+                                </div>
+                            </a>
+                        <?php endforeach; 
+                        wp_reset_postdata();
+                    endif;?>
+                </div>
+            </div>
+        </section>
+  <?php endif;
+endif;?>
 
 <?php if($section_bleue):?>
 <section id="section_bleue">
