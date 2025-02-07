@@ -65,7 +65,6 @@ get_template_part( 'templates-parts/header-nav');?>
         
         <div class="cold">
             <?php if($contact): echo $contact; endif;?>
-            <?php echo do_shortcode( '[contact-form-7 id="b3e1849" title="Candidature"]' ) ?>
         </div>
     </div>
 </section>
