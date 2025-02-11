@@ -1,5 +1,4 @@
 import inView from "in-view";
-import gsap from "gsap";
 
 $(document).ready(function () {
   //IN-VIEW
@@ -102,5 +101,5 @@ $(document).ready(function () {
       console.log('close popup');
       modal.css("display","none");
     }
-});
+  });
 });

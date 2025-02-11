@@ -26,8 +26,7 @@ get_template_part( 'templates-parts/header-nav');?>
 <header id="header" style="background:url('<?php echo $bg_url;?>');">
 </header>
 
-<?php if($jobActif):
-    if(current_user_can('administrator')):?>
+<?php if($jobActif):?>
         <section id="simple-page">
             <div class="container">
                 <div class="colg">
@@ -58,8 +57,7 @@ get_template_part( 'templates-parts/header-nav');?>
                 </div>
             </div>
         </section>
-  <?php endif;
-endif;?>
+  <?php endif;?>
 
 <section id="presa_jobs">
     <div class="container">

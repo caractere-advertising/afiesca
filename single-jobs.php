@@ -35,7 +35,7 @@ get_template_part( 'templates-parts/header-nav');?>
     <div class="container">
         <div class="colg">
             <div class="intro from-bottom">
-                    <?php if($titre) : echo $titre;endif;?>
+                <?php if($titre) : echo $titre;endif;?>
             </div>
         </div>
         <div class="cold">
