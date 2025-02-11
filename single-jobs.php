@@ -27,6 +27,8 @@ else :
     $bg_url = $bg_header['url'];
 endif;
 
+$titPos = get_field('titre_postuler');
+
 get_template_part( 'templates-parts/header-nav');?>
 
 <header id="header" style="background:url('<?php echo $bg_url;?>');"></header>
@@ -60,7 +62,8 @@ get_template_part( 'templates-parts/header-nav');?>
 <section id="outro">
     <div class="container">
         <div class="colg">
-            <h2><?php echo "Vous souhaitez"; ?></br><strong><?php echo "postuler ?";?></strong></h2>
+            <?php if($titPos): echo $titPos; endif;?>
+           
         </div>
         
         <div class="cold">
